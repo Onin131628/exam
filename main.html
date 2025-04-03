@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z5l5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" />
     <title>Gadgetize</title>
+    <style>
+      .swiper-slide img {
+          filter: grayscale(70%);
+          transition: 0.3s;
+      }
+      .swiper-slide img:hover {
+          filter: grayscale(0%);
+      }
+  </style>
 </head>
 <body class="bg-white">
     <header class="p-4 flex items-center justify-between">
@@ -125,7 +141,341 @@
           <p class="text-gray-600">8 Product</p>
         </div>
       </div>
+      <div class="p-6 bg-gray-100">
+        <h2 class="text-2xl font-semibold mb-4">New release Gadgets</h2>
+        
+        <div class="flex space-x-4 mb-6">
+          <button class="text-green-600 font-semibold" onclick="filterProducts('all')">● All Products</button>
+          <button class="text-gray-600" onclick="filterProducts('laptop')">● Laptop</button>
+          <button class="text-gray-600" onclick="filterProducts('keyboard')">● Keyboard</button>
+          <button class="text-gray-600" onclick="filterProducts('mouse')">● Mouse</button>
+          <button class="text-gray-600" onclick="filterProducts('headphone')">● Headphone</button>
+        </div>
+        
+        <div id="product-grid" class="grid grid-cols-4 gap-6">
+          <div class="bg-white p-4 rounded-lg shadow product-card" data-category="headphone">
+            <img src="headphone.png" alt="Elite Audio Gear" class="w-full mb-3">
+            <h3 class="text-lg font-semibold">Elite Audio Gear</h3>
+            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet consectetur...</p>
+            <div class="flex items-center mt-2 text-red-500">⭐⭐⭐⭐☆ (80)</div>
+            <p class="line-through text-gray-500 text-sm">$12.00</p>
+            <p class="text-green-600 text-lg font-bold">$85.00</p>
+            <button class="w-full border border-green-600 text-green-600 py-2 mt-3 rounded-md hover:bg-green-600 hover:text-white">Add To Cart</button>
+          </div>
+          
+          <div class="bg-white p-4 rounded-lg shadow product-card" data-category="monitor">
+            <img src="monitor.png" alt="Ultra Bright LCD" class="w-full mb-3">
+            <h3 class="text-lg font-semibold">Ultra Bright LCD</h3>
+            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet consectetur...</p>
+            <div class="flex items-center mt-2 text-red-500">⭐⭐⭐⭐☆ (80)</div>
+            <p class="line-through text-gray-500 text-sm">$12.00</p>
+            <p class="text-green-600 text-lg font-bold">$10.00</p>
+            <button class="w-full border border-green-600 text-green-600 py-2 mt-3 rounded-md hover:bg-green-600 hover:text-white">Add To Cart</button>
+          </div>
+          
+          <div class="bg-white p-4 rounded-lg shadow product-card" data-category="phone">
+            <img src="phone.png" alt="Nexus Mobile Pro 256GB" class="w-full mb-3">
+            <h3 class="text-lg font-semibold">Nexus Mobile Pro 256GB</h3>
+            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet consectetur...</p>
+            <div class="flex items-center mt-2 text-red-500">⭐⭐⭐⭐☆ (80)</div>
+            <p class="line-through text-gray-500 text-sm">$12.00</p>
+            <p class="text-green-600 text-lg font-bold">$10.00</p>
+            <button class="w-full border border-green-600 text-green-600 py-2 mt-3 rounded-md hover:bg-green-600 hover:text-white">Add To Cart</button>
+          </div>
+          
+          <div class="bg-white p-4 rounded-lg shadow product-card" data-category="laptop">
+            <img src="laptop.png" alt="Ultra Tech Book Plus" class="w-full mb-3">
+            <h3 class="text-lg font-semibold">Ultra Tech Book Plus</h3>
+            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet consectetur...</p>
+            <div class="flex items-center mt-2 text-red-500">⭐⭐⭐⭐☆ (80)</div>
+            <p class="line-through text-gray-500 text-sm">$1350.00</p>
+            <p class="text-green-600 text-lg font-bold">$1250.00</p>
+            <button class="w-full border border-green-600 text-green-600 py-2 mt-3 rounded-md hover:bg-green-600 hover:text-white">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="bg-gray-100 flex items-center justify-center min-h-screen">
+        <div class="w-full max-w-6xl">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide flex justify-center">
+                        <img src="https://images.unsplash.com/photo-1604075776949-731ffb62e7a5" alt="Infinix" class="w-28">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="https://images.unsplash.com/photo-1562214107-3be72fd9c9b7" alt="Oppo" class="w-28">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="https://images.unsplash.com/photo-1604201711069-8a4b9e405d72" alt="Vivo" class="w-28">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="https://images.unsplash.com/photo-1623502733910-ded46587a998" alt="Samsung" class="w-28">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="https://images.unsplash.com/photo-1622449732140-b6a5740a0d5b" alt="OnePlus" class="w-28">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-6">Latest Blogs</h2>
+      <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+              <!-- Blog 1 -->
+              <div class="swiper-slide bg-white rounded-lg shadow p-4">
+                  <img src="path_to_image_1.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+                  <div class="mt-4">
+                      <p class="text-gray-500 text-sm">24 June, 2024</p>
+                      <h3 class="font-semibold text-lg mt-1">Headphone Heroes: Elevating Your Experience Quality Sound</h3>
+                      <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Vitae vel sit convallis aliquet amet vestibulum maecenas ac.</p>
+                      <div class="flex justify-between items-center mt-4">
+                          <span class="text-gray-500">By Emily</span>
+                          <a href="#" class="text-blue-500 hover:underline">Read More →</a>
+                      </div>
+                  </div>
+              </div>
+  
+              <!-- Blog 2 -->
+              <div class="swiper-slide bg-white rounded-lg shadow p-4">
+                  <img src="path_to_image_2.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+                  <div class="mt-4">
+                      <p class="text-gray-500 text-sm">24 June, 2024</p>
+                      <h3 class="font-semibold text-lg mt-1">Gizmo Galore: Exploring the Coolest Gadgets on the Market</h3>
+                      <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Vitae vel sit convallis aliquet amet vestibulum maecenas ac.</p>
+                      <div class="flex justify-between items-center mt-4">
+                          <span class="text-gray-500">By Emily</span>
+                          <a href="#" class="text-blue-500 hover:underline">Read More →</a>
+                      </div>
+                  </div>
+              </div>
+  
+              <!-- Blog 3 -->
+              <div class="swiper-slide bg-white rounded-lg shadow p-4">
+                  <img src="path_to_image_3.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+                  <div class="mt-4">
+                      <p class="text-gray-500 text-sm">24 June, 2024</p>
+                      <h3 class="font-semibold text-lg mt-1">The 4K Perspective: Gaining Insights into Ultra HD Entertainment</h3>
+                      <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Vitae vel sit convallis aliquet amet vestibulum maecenas ac.</p>
+                      <div class="flex justify-between items-center mt-4">
+                          <span class="text-gray-500">By Emily</span>
+                          <a href="#" class="text-blue-500 hover:underline">Read More →</a>
+                      </div>
+                  </div>
+              </div>
+  
+              <!-- Blog 4 -->
+              <div class="swiper-slide bg-white rounded-lg shadow p-4">
+                  <img src="path_to_image_4.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+                  <div class="mt-4">
+                      <p class="text-gray-500 text-sm">24 June, 2024</p>
+                      <h3 class="font-semibold text-lg mt-1">Gaming Grasp: Navigating the World of Game Controllers</h3>
+                      <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Vitae vel sit convallis aliquet amet vestibulum maecenas ac.</p>
+                      <div class="flex justify-between items-center mt-4">
+                          <span class="text-gray-500">By Emily</span>
+                          <a href="#" class="text-blue-500 hover:underline">Read More →</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="swiper-slide bg-white rounded-lg shadow p-4">
+                <img src="path_to_image_4.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+                <div class="mt-4">
+                    <p class="text-gray-500 text-sm">24 June, 2024</p>
+                    <h3 class="font-semibold text-lg mt-1">Gaming Grasp: Navigating the World of Game Controllers</h3>
+                    <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Vitae vel sit convallis aliquet amet vestibulum maecenas ac.</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-gray-500">By Emily</span>
+                        <a href="#" class="text-blue-500 hover:underline">Read More →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide bg-white rounded-lg shadow p-4">
+              <img src="path_to_image_4.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+              <div class="mt-4">
+                  <p class="text-gray-500 text-sm">24 June, 2024</p>
+                  <h3 class="font-semibold text-lg mt-1">Gaming Grasp: Navigating the World of Game Controllers</h3>
+                  <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Vitae vel sit convallis aliquet amet vestibulum maecenas ac.</p>
+                  <div class="flex justify-between items-center mt-4">
+                      <span class="text-gray-500">By Emily</span>
+                      <a href="#" class="text-blue-500 hover:underline">Read More →</a>
+                  </div>
+              </div>
+          </div>
+          <div class="swiper-slide bg-white rounded-lg shadow p-4">
+            <img src="path_to_image_4.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+            <div class="mt-4">
+                <p class="text-gray-500 text-sm">24 June, 2024</p>
+                <h3 class="font-semibold text-lg mt-1">Gaming Grasp: Navigating the World of Game Controllers</h3>
+                <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Vitae vel sit convallis aliquet amet vestibulum maecenas ac.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-gray-500">By Emily</span>
+                    <a href="#" class="text-blue-500 hover:underline">Read More →</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide bg-white rounded-lg shadow p-4">
+          <img src="path_to_image_4.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="mt-4">
+              <p class="text-gray-500 text-sm">24 June, 2024</p>
+              <h3 class="font-semibold text-lg mt-1">Gaming Grasp: Navigating the World of Game Controllers</h3>
+              <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Vitae vel sit convallis aliquet amet vestibulum maecenas ac.</p>
+              <div class="flex justify-between items-center mt-4">
+                  <span class="text-gray-500">By Emily</span>
+                  <a href="#" class="text-blue-500 hover:underline">Read More →</a>
+              </div>
+          </div>
+      </div>
+      <div class="swiper-slide bg-white rounded-lg shadow p-4">
+        <img src="path_to_image_4.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="mt-4">
+            <p class="text-gray-500 text-sm">24 June, 2024</p>
+            <h3 class="font-semibold text-lg mt-1">Gaming Grasp: Navigating the World of Game Controllers</h3>
+            <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Vitae vel sit convallis aliquet amet vestibulum maecenas ac.</p>
+            <div class="flex justify-between items-center mt-4">
+                <span class="text-gray-500">By Emily</span>
+                <a href="#" class="text-blue-500 hover:underline">Read More →</a>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-slide bg-white rounded-lg shadow p-4">
+      <img src="path_to_image_4.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+      <div class="mt-4">
+          <p class="text-gray-500 text-sm">24 June, 2024</p>
+          <h3 class="font-semibold text-lg mt-1">Gaming Grasp: Navigating the World of Game Controllers</h3>
+          <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Vitae vel sit convallis aliquet amet vestibulum maecenas ac.</p>
+          <div class="flex justify-between items-center mt-4">
+              <span class="text-gray-500">By Emily</span>
+              <a href="#" class="text-blue-500 hover:underline">Read More →</a>
+          </div>
+      </div>
+  </div>
+          </div>
+      </div>
+  </div>
+
+
+  <footer class="bg-gray-50 text-gray-800 py-10">
+    <div class="container mx-auto flex flex-wrap">
+        <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <h1 class="text-3xl font-bold">GADGETIZE</h1>
+            <p class="mt-2">Lorem ipsum dolor sit amet consectetur. Eu dolor faucibus sit fames elit ac. Hendrerit ultricies morbi faucibus.</p>
+            <p class="flex items-center mt-4">
+                <span class="mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 14h2a2 2 0 001-3.732M16 10H2m2 4h12m2 0v4a3 3 0 01-3 3H4a3 3 0 01-3-3v-4h12m7.465-1.465A2 2 0 0020 8h-1.732A10 10 0 1110 18h4a2 2 0 00.293-3.293M16 14h-5a3 3 0 100 6h5a3 3 0 100-6z" />
+                    </svg>
+                </span>
+                <span>Call us 24/7</span>
+                <strong class="ml-2">+001 123 456 789</strong>
+            </p>
+        </div>
+
+        <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <h2 class="font-bold">Find It Fast</h2>
+            <ul class="mt-2">
+                <li>Laptop & Computer</li>
+                <li>Camera & Photo</li>
+                <li>Smartphone & Tablet</li>
+                <li>TV & Audio</li>
+                <li>Home & Electronic</li>
+                <li>Headphone & Speakers</li>
+            </ul>
+        </div>
+
+        <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <h2 class="font-bold">Quick Link</h2>
+            <ul class="mt-2">
+                <li>Home Page</li>
+                <li>About Us</li>
+                <li>Shop Now</li>
+                <li>Signup</li>
+                <li>Login</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+
+        <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <h2 class="font-bold">Customer Care</h2>
+            <ul class="mt-2">
+                <li>My Account</li>
+                <li>Track Your Order</li>
+                <li>Customer Service</li>
+                <li>Blogs</li>
+                <li>FAQs</li>
+                <li>Coming Soon</li>
+            </ul>
+        </div>
+
+        <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <h2 class="font-bold">Contact Us</h2>
+            <p class="mt-2">26 South Street, New York, NY 98, USA.</p>
+            <p class="mt-1">exampleinfo@gmail.com</p>
+            <h3 class="font-bold mt-4">Follow Us!</h3>
+            <div class="flex space-x-4 mt-2">
+                <a href="#" class="text-green-600">Facebook</a>
+                <a href="#" class="text-green-600">Instagram</a>
+                <a href="#" class="text-green-600">Twitter</a>
+                <a href="#" class="text-green-600">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
       
+      <script>
+        function filterProducts(category) {
+          const products = document.querySelectorAll('.product-card');
+          products.forEach(product => {
+            if (category === 'all' || product.getAttribute('data-category') === category) {
+              product.style.display = 'block';
+            } else {
+              product.style.display = 'none';
+            }
+          });
+        }
+
+        new Swiper('.mySwiper', {
+            slidesPerView: 3, // Adjust number of visible logos
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false
+            },
+            breakpoints: {
+                640: { slidesPerView: 3 },
+                768: { slidesPerView: 4 },
+                1024: { slidesPerView: 5 }
+            }
+        });
+        var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 30
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 
 
