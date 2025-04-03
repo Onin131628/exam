@@ -25,13 +25,24 @@
 <body class="bg-white">
     <header class="p-4 flex items-center justify-between">
         <div class="flex items-center space-x-2">
-            <span class="text-2xl font-bold text-black">Techmax</span>
+            <img src="image/logo.png" alt="Techmax Logo" class="h-10 w-10">
+            <span class="text-2xl font-bold text-black">ThynkTech</span>
             
         </div>
         
         <div class="flex items-center space-x-4">
             <select class="border border-gray-300 rounded-md p-2">
                 <option>All Categories</option>
+                <option>Headphone</option>
+                <option>Gaming Mouse</option>
+                <option>Computer</option>
+                <option>Keyboard</option>
+                <option>Playstation</option>
+                <option>Gaming Headphone</option>
+                <option>Apple Led</option>
+                <option>Samsung Phone</option>
+                <option>Earbuds</option>
+                <option>Tablet</option>
                 <!-- Add more categories as needed -->
             </select>
             <input type="text" placeholder="Search for products..." class="border border-gray-300 rounded-md p-2">
@@ -45,7 +56,7 @@
         </div>
     </header>
 
-    <nav class="bg-gray-100 p-2 flex justify-center space-x-6">
+    <nav class="bg-green-100 p-2 flex justify-center space-x-6">
         <a href="main.html" class="font-semibold text-green-600">HOME PAGE</a>
         <a href="about.html" class="font-semibold">ABOUT US</a>
         <a href="blog.html" class="font-semibold">BLOGS</a>
@@ -53,113 +64,112 @@
         <a href="contact.html" class="font-semibold">CONTACT US</a>
     </nav>
 
-    <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-8 flex flex-wrap">
-        <!-- Main Product -->
-        <div class="bg-white rounded-lg shadow-lg p-6 flex-1 mr-4">
-            <h2 class="text-yellow-400 text-lg font-bold">NEW ARRIVALS</h2>
-            <h1 class="text-2xl font-extrabold text-gray-800 mt-4">4K LCD</h1>
-            <h3 class="text-3xl font-bold text-yellow-500">Quantum Vision LCD</h3>
-            <p class="text-gray-600 mt-2">Limited Time: Online Only!</p>
-            <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded mt-4">See More</button>
-        </div>
-        
-        <!-- Right Section -->
-        <div class="flex flex-col">
-            <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
-                <h3 class="text-lg font-bold">Mobile</h3>
-                <p class="text-gray-800">Nexus Mobile Pro 256GB</p>
-                <p class="text-gray-600">Limited Time: Online Only!</p>
-            </div>
-            
-            <div class="bg-white rounded-lg shadow-lg p-4">
-                <h3 class="text-lg font-bold">iPad Mini</h3>
-                <p class="text-gray-800">10 Inch iPad Mini Pro</p>
-                <p class="text-gray-600">Limited Time: Online Only!</p>
-            </div>
-        </div>
+    <div class="bg-gradient-to-r from-green-600 to-yellow-600 p-8 flex flex-wrap">
+      <!-- Main Product -->
+      <div class="bg-[url('image/4k1.png')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg p-6 flex-1 mr-4 text-white">
+        <h2 class="text-yellow-400 text-lg font-bold">NEW ARRIVALS</h2>
+        <h1 class="text-2xl font-extrabold mt-4">.</h1>
+        <h3 class="text-3xl font-bold text-yellow-500">.</h3>
+        <p class="mt-2">.</p>
+        <button class="text-green-500 font-semibold py-2 px-4 rounded mt-4 border border-gree-500 hover:bg-green-500 hover:text-white transition duration-300">See More</button>
+      </div>
+      
+      <!-- Right Section -->
+      <div class="flex flex-col space-y-4"></div>
+      <div class="bg-[url('image/mi1.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg p-4 mb-4 h-48 flex flex-col justify-end">
+        <h3 class="text-lg font-bold text-yellow-500">Mobile</h3>
+        <p class="text-pink">Xiaomi Mi 14 Ultra</p>
+        <p class="text-pink">Newest Phone</p>
+        <button class="text-green-500 font-semibold py-2 px-4 rounded mt-2 border border-green-500 hover:bg-green-500 hover:text-white transition duration-300">See More</button>
+      </div>
+
+      <div class="bg-[url('image/pad5.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg p-4 h-48 flex flex-col justify-end">
+        <h3 class="text-lg font-bold text-yellow-500">iPad Mini</h3>
+        <p class="text-black">10 Inch iPad Mini Pro</p>
+        <button class="text-green-500 font-semibold py-2 px-4 rounded mt-2 border border-green-500 hover:bg-green-500 hover:text-white transition duration-300">See More</button>
+      </div>
     </div>
     <div class="flex justify-center space-x-6 p-4 bg-gray-100 overflow-x-auto">
       <div class="flex flex-col items-center">
-          <div class="w-24 h-24 rounded-full overflow-hidden">
-              <img src="head2.jpg" alt="Headphones" class="w-full h-full object-cover" />
-          </div>
-          <h3 class="text-lg font-semibold mt-2">Headphones</h3>
-          <p class="text-gray-600">8 Product</p>
+        <div class="w-24 h-24 rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-110 cursor-pointer hover:ring-1 hover:ring-green-500" onclick="window.location.href='headphones.html'">
+          <img src="image/head2.jpg" alt="Headphones" class="w-full h-full object-cover" />
+        </div>
+        <h3 class="text-lg font-semibold mt-2">Headphones</h3>
+        <p class="text-gray-600">8 Product</p>
       </div>
-  
+
       <div class="flex flex-col items-center">
-          <div class="w-24 h-24 rounded-full overflow-hidden">
-              <img src="mouse1.jpg" alt="Gaming Mouse" class="w-full h-full object-cover" />
-          </div>
-          <h3 class="text-lg font-semibold mt-2">Gaming Mouse</h3>
-          <p class="text-gray-600">4 Product</p>
+        <div class="w-24 h-24 rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-110 cursor-pointer hover:ring-1 hover:ring-green-500" onclick="window.location.href='gaming-mouse.html'">
+          <img src="image/mouse1.jpg" alt="Gaming Mouse" class="w-full h-full object-cover" />
+        </div>
+        <h3 class="text-lg font-semibold mt-2">Gaming Mouse</h3>
+        <p class="text-gray-600">4 Product</p>
       </div>
-  
+
       <div class="flex flex-col items-center">
-          <div class="w-24 h-24 rounded-full overflow-hidden">
-              <img src="pc2.jpg" alt="MacBook/PCs" class="w-full h-full object-cover" />
-          </div>
-          <h3 class="text-lg font-semibold mt-2">MacBook/PCs</h3>
-          <p class="text-gray-600">6 Product</p>
+        <div class="w-24 h-24 rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-110 cursor-pointer hover:ring-1 hover:ring-green-500" onclick="window.location.href='macbook-pcs.html'">
+          <img src="image/pc2.jpg" alt="MacBook/PCs" class="w-full h-full object-cover" />
+        </div>
+        <h3 class="text-lg font-semibold mt-2">MacBook/PCs</h3>
+        <p class="text-gray-600">6 Product</p>
       </div>
-  
+
       <div class="flex flex-col items-center">
-          <div class="w-24 h-24 rounded-full overflow-hidden">
-              <img src="key1.webp" alt="RGB Keyboard" class="w-full h-full object-cover" />
-          </div>
-          <h3 class="text-lg font-semibold mt-2">RGB Keyboard</h3>
-          <p class="text-gray-600">7 Product</p>
+        <div class="w-24 h-24 rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-110 cursor-pointer hover:ring-1 hover:ring-green-500" onclick="window.location.href='rgb-keyboard.html'">
+          <img src="image/key1.webp" alt="RGB Keyboard" class="w-full h-full object-cover" />
+        </div>
+        <h3 class="text-lg font-semibold mt-2">RGB Keyboard</h3>
+        <p class="text-gray-600">7 Product</p>
       </div>
-  
+
       <div class="flex flex-col items-center">
-          <div class="w-24 h-24 rounded-full overflow-hidden">
-              <img src="ps1.webp" alt="Playstation" class="w-full h-full object-cover" />
-          </div>
-          <h3 class="text-lg font-semibold mt-2">Playstation</h3>
-          <p class="text-gray-600">8 Product</p>
+        <div class="w-24 h-24 rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-110 cursor-pointer hover:ring-1 hover:ring-green-500" onclick="window.location.href='playstation.html'">
+          <img src="image/ps1.webp" alt="Playstation" class="w-full h-full object-cover" />
+        </div>
+        <h3 class="text-lg font-semibold mt-2">Playstation</h3>
+        <p class="text-gray-600">8 Product</p>
       </div>
-  
+
       <div class="flex flex-col items-center">
-          <div class="w-24 h-24 rounded-full overflow-hidden">
-              <img src="head1.jpg" alt="Gaming Headphones" class="w-full h-full object-cover" />
-          </div>
-          <h3 class="text-lg font-semibold mt-2">Gaming Headphones</h3>
-          <p class="text-gray-600">3 Product</p>
+        <div class="w-24 h-24 rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-110 cursor-pointer hover:ring-1 hover:ring-green-500" onclick="window.location.href='gaming-headphones.html'">
+          <img src="image/head1.jpg" alt="Gaming Headphones" class="w-full h-full object-cover" />
+        </div>
+        <h3 class="text-lg font-semibold mt-2">Gaming Headphones</h3>
+        <p class="text-gray-600">3 Product</p>
       </div>
-  
+
       <div class="flex flex-col items-center">
-          <div class="w-24 h-24 rounded-full overflow-hidden">
-              <img src="ap5.jpg" alt="Apple LED" class="w-full h-full object-cover" />
-          </div>
-          <h3 class="text-lg font-semibold mt-2">Apple LED</h3>
-          <p class="text-gray-600">2 Product</p>
+        <div class="w-24 h-24 rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-110 cursor-pointer hover:ring-1 hover:ring-green-500" onclick="window.location.href='apple-led.html'">
+          <img src="image/ap5.jpg" alt="Apple LED" class="w-full h-full object-cover" />
+        </div>
+        <h3 class="text-lg font-semibold mt-2">Apple LED</h3>
+        <p class="text-gray-600">2 Product</p>
       </div>
-  
+
       <div class="flex flex-col items-center">
-          <div class="w-24 h-24 rounded-full overflow-hidden">
-              <img src="sam1.jpg" alt="Samsung Phone" class="w-full h-full object-cover" />
-          </div>
-          <h3 class="text-lg font-semibold mt-2">Samsung Phone</h3>
-          <p class="text-gray-600">12 Product</p>
+        <div class="w-24 h-24 rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-110 cursor-pointer hover:ring-1 hover:ring-green-500" onclick="window.location.href='samsung-phone.html'">
+          <img src="image/sam3.jpg" alt="Samsung Phone" class="w-full h-full object-cover" />
+        </div>
+        <h3 class="text-lg font-semibold mt-2">Samsung Phone</h3>
+        <p class="text-gray-600">12 Product</p>
       </div>
-  
+
       <div class="flex flex-col items-center">
-          <div class="w-24 h-24 rounded-full overflow-hidden">
-              <img src="air1.jpg" alt="Earbuds" class="w-full h-full object-cover" />
-          </div>
-          <h3 class="text-lg font-semibold mt-2">Earbuds</h3>
-          <p class="text-gray-600">4 Product</p>
+        <div class="w-24 h-24 rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-110 cursor-pointer hover:ring-1 hover:ring-green-500" onclick="window.location.href='earbuds.html'">
+          <img src="image/air1.jpg" alt="Earbuds" class="w-full h-full object-cover" />
+        </div>
+        <h3 class="text-lg font-semibold mt-2">Earbuds</h3>
+        <p class="text-gray-600">4 Product</p>
       </div>
-  
+
       <div class="flex flex-col items-center">
-          <div class="w-24 h-24 rounded-full overflow-hidden">
-              <img src="tab1.jpg" alt="Tablets" class="w-full h-full object-cover" />
-          </div>
-          <h3 class="text-lg font-semibold mt-2">Tablets</h3>
-          <p class="text-gray-600">8 Product</p>
+        <div class="w-24 h-24 rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-110 cursor-pointer hover:ring-1 hover:ring-green-500" onclick="window.location.href='tablets.html'">
+          <img src="image/tab2.jpg" alt="Tablets" class="w-full h-full object-cover" />
+        </div>
+        <h3 class="text-lg font-semibold mt-2">Tablets</h3>
+        <p class="text-gray-600">8 Product</p>
       </div>
-  </div>
-  
+    </div>
       <div class="p-6 bg-gray-100">
         <h2 class="text-2xl font-semibold mb-4">New release Gadgets</h2>
         
@@ -173,36 +183,55 @@
         
         <div id="product-grid" class="grid grid-cols-4 gap-6">
           <div class="bg-white p-4 rounded-lg shadow product-card" data-category="headphone">
-            <img src="headphone.png" alt="Elite Audio Gear" class="w-full mb-3">
-            <h3 class="text-lg font-semibold">Elite Audio Gear</h3>
-            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet consectetur...</p>
+            <img src="image/razer1.webp" alt="Razer Kraken Gaming Headphone" class="w-full mb-3">
+            <h3 class="text-lg font-semibold">Razer Kraken Gaming Headphone</h3>
+            <p class="text-gray-500 text-sm">🔹 Key Features: <p></p>
+              ✔️ 50mm Drivers – Rich sound with deep bass <p></p>
+              ✔️ 7.1 Surround Sound (PC only) <p></p>
+              ✔️ Retractable Noise-Isolating Microphone <p></p>
+              ✔️ Cooling Gel-Infused Ear Cushions for comfort <p></p>
+              ✔️ Durable Aluminum Frame <p></p>
+              ✔️ Multi-Platform Compatibility – PC, PS5, Xbox, Switch, Mobile</p>
             <div class="flex items-center mt-2 text-red-500">⭐⭐⭐⭐☆ (80)</div>
             <p class="text-green-600 text-lg font-bold">$85.00</p>
             <button class="w-full border border-green-600 text-green-600 py-2 mt-3 rounded-md hover:bg-green-600 hover:text-white">See More</button>
           </div>
           
           <div class="bg-white p-4 rounded-lg shadow product-card" data-category="monitor">
-            <img src="monitor.png" alt="Ultra Bright LCD" class="w-full mb-3">
-            <h3 class="text-lg font-semibold">Ultra Bright LCD</h3>
-            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet consectetur...</p>
+            <img src="image/mon1.webp" alt="Asus Rog Monitor" class="w-full mb-3">
+            <h3 class="text-lg font-semibold">Asus Rog Monitor</h3>
+            <p class="text-gray-500 text-sm">🔹 Key Features: <p></p>
+              ✔️ High Refresh Rate – 144Hz to 360Hz for ultra-smooth gameplay<p></p>
+              ✔️ Fast Response Time – 1ms or lower for minimal motion blur<p></p>
+              ✔️ G-Sync – Eliminates screen tearing<p></p>
+              ✔️ HDR & IPS/VA Panels – Vivid colors and deep contrast<p></p>
+              ✔️ Multiple Ports – HDMI, DisplayPort, and USB support</p>
             <div class="flex items-center mt-2 text-red-500">⭐⭐⭐⭐☆ (80)</div>
             <p class="text-green-600 text-lg font-bold">$10.00</p>
             <button class="w-full border border-green-600 text-green-600 py-2 mt-3 rounded-md hover:bg-green-600 hover:text-white">See More</button>
           </div>
           
           <div class="bg-white p-4 rounded-lg shadow product-card" data-category="phone">
-            <img src="phone.png" alt="Nexus Mobile Pro 256GB" class="w-full mb-3">
-            <h3 class="text-lg font-semibold">Nexus Mobile Pro 256GB</h3>
-            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet consectetur...</p>
+            <img src="image/ip1.webp" alt="Iphone 16 Pro Max" class="w-full mb-3">
+            <h3 class="text-lg font-semibold">Iphone 16 Pro Max</h3>
+            <p class="text-gray-500 text-sm">🔹 Key Features:<p></p>
+            ✔️ 6.9-inch Super Retina XDR Display – Stunning visuals with 2868×1320 resolution <p></p>
+            ✔️ A18 Pro Chip – Lightning-fast performance with apple AI<p></p>
+            ✔️ Advanced Camera System – 48 MP main, 48 MP ultra-wide, 12 MP periscope telephoto<p></p>
+            ✔️ 4,685 mAh Battery – Long-lasting power and efficient <p></p>
             <div class="flex items-center mt-2 text-red-500">⭐⭐⭐⭐☆ (80)</div>
             <p class="text-green-600 text-lg font-bold">$10.00</p>
             <button class="w-full border border-green-600 text-green-600 py-2 mt-3 rounded-md hover:bg-green-600 hover:text-white">See More</button>
           </div>
           
           <div class="bg-white p-4 rounded-lg shadow product-card" data-category="laptop">
-            <img src="laptop.png" alt="Ultra Tech Book Plus" class="w-full mb-3">
-            <h3 class="text-lg font-semibold">Ultra Tech Book Plus</h3>
-            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet consectetur...</p>
+            <img src="image/len1.webp" alt="Legion Pro 5" class="w-full mb-3">
+            <h3 class="text-lg font-semibold">Legion Pro 5</h3>
+            <p class="text-gray-500 text-sm">🔹 Key Features: <p></p>
+              ✔️ AMD Ryzen 7000 Series Processor – Delivers powerful gaming and multitasking performance <p></p>
+              ✔️ NVIDIA GeForce RTX Graphics – Realistic ray tracing<p></p>
+              ✔️ 16-inch WQXGA Display – 2560x1600 resolution with a 165Hz refresh rate <p></p>
+               ✔️ Multiple Connectivity Options – HDMI, DisplayPort, USB-C, and Ethernet support </p>
             <div class="flex items-center mt-2 text-red-500">⭐⭐⭐⭐☆ (80)</div>
             <p class="text-green-600 text-lg font-bold">$1250.00</p>
             <button class="w-full border border-green-600 text-green-600 py-2 mt-3 rounded-md hover:bg-green-600 hover:text-white">See More</button>
@@ -210,43 +239,90 @@
         </div>
       </div>
 
-
-      <div class="bg-gray-100 flex items-center justify-center min-h-screen">
-        <div class="w-full max-w-6xl">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide flex justify-center">
-                        <img src="https://images.unsplash.com/photo-1604075776949-731ffb62e7a5" alt="Infinix" class="w-28">
-                    </div>
-                    <div class="swiper-slide flex justify-center">
-                        <img src="https://images.unsplash.com/photo-1562214107-3be72fd9c9b7" alt="Oppo" class="w-28">
-                    </div>
-                    <div class="swiper-slide flex justify-center">
-                        <img src="https://images.unsplash.com/photo-1604201711069-8a4b9e405d72" alt="Vivo" class="w-28">
-                    </div>
-                    <div class="swiper-slide flex justify-center">
-                        <img src="https://images.unsplash.com/photo-1623502733910-ded46587a998" alt="Samsung" class="w-28">
-                    </div>
-                    <div class="swiper-slide flex justify-center">
-                        <img src="https://images.unsplash.com/photo-1622449732140-b6a5740a0d5b" alt="OnePlus" class="w-28">
-                    </div>
-                </div>
+      <div class="bg-green-100 flex items-center justify-center h-[170px] w-full overflow-hidden">
+        <div class="container mx-auto">
+          <div class="flex animate-scroll h-full space-x-8">
+            <div class="flex-shrink-0 flex justify-center items-center h-full">
+              <img src="image/asus1.png" alt="Infinix" class="w-40 h-40 object-contain">
             </div>
+            <div class="flex-shrink-0 flex justify-center items-center h-full">
+              <img src="image/lenovo.png" alt="Oppo" class="w-40 h-40 object-contain">
+            </div>
+            <div class="flex-shrink-0 flex justify-center items-center h-full">
+              <img src="image/razlogo1.svg" alt="Vivo" class="w-40 h-40 object-contain">
+            </div>
+            <div class="flex-shrink-0 flex justify-center items-center h-full">
+              <img src="image/sams2.svg" alt="Samsung" class="w-40 h-40 object-contain">
+            </div>
+            <div class="flex-shrink-0 flex justify-center items-center h-full">
+              <img src="image/play7.png" alt="OnePlus" class="w-40 h-40 object-contain">
+            </div>
+            <div class="flex-shrink-0 flex justify-center items-center h-full">
+              <img src="image/milogo1.png" alt="OnePlus" class="w-40 h-40 object-contain">
+            </div>
+            <div class="flex-shrink-0 flex justify-center items-center h-full">
+              <img src="image/123.png" alt="OnePlus" class="w-40 h-40 object-contain">
+            </div>
+            <div class="flex-shrink-0 flex justify-center items-center h-full">
+              <img src="image/hy1.png" alt="OnePlus" class="w-40 h-40 object-contain">
+            </div>
+            <!-- Duplicate images for looping effect -->
+            <div class="flex-shrink-0 flex justify-center items-center h-full">
+              <img src="image/asus1.png" alt="Infinix" class="w-40 h-40 object-contain">
+            </div>
+            <div class="flex-shrink-0 flex justify-center items-center h-full">
+              <img src="image/lenovo.png" alt="Oppo" class="w-40 h-40 object-contain">
+            </div>
+            <div class="flex-shrink-0 flex justify-center items-center h-full">
+              <img src="image/razlogo1.svg" alt="Vivo" class="w-40 h-40 object-contain">
+            </div>
+            <div class="flex-shrink-0 flex justify-center items-center h-full">
+              <img src="image/sams2.svg" alt="Samsung" class="w-40 h-40 object-contain">
+            </div>
+            <div class="flex-shrink-0 flex justify-center items-center h-full">
+              <img src="image/play7.png" alt="OnePlus" class="w-40 h-40 object-contain">
+            </div>
+            <div class="flex-shrink-0 flex justify-center items-center h-full">
+              <img src="image/milogo1.png" alt="OnePlus" class="w-40 h-40 object-contain">
+            </div>
+            <div class="flex-shrink-0 flex justify-center items-center h-full">
+              <img src="image/rog.png" alt="OnePlus" class="w-40 h-40 object-contain">
+            </div>
+            <div class="flex-shrink-0 flex justify-center items-center h-full">
+              <img src="image/hy1.png" alt="OnePlus" class="w-40 h-40 object-contain">
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
+
+      <style>
+        @keyframes scroll {
+          0% {
+        transform: translateX(0);
+          }
+          100% {
+        transform: translateX(-100%);
+          }
+        }
+
+        .animate-scroll {
+          display: flex;
+          animation: scroll 20s linear infinite;
+        }
+      </style>
     <div class="container mx-auto px-4">
       <h2 class="text-2xl font-bold mb-6">Latest Blogs</h2>
       <div class="swiper mySwiper">
           <div class="swiper-wrapper">
               <!-- Blog 1 -->
               <div class="swiper-slide bg-white rounded-lg shadow p-4">
-                  <img src="path_to_image_1.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+                  <img src="image/b1.webp" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
                   <div class="mt-4">
-                      <p class="text-gray-500 text-sm">24 June, 2024</p>
+                      <p class="text-gray-500 text-sm">June 24, 2007</p>
                       <h3 class="font-semibold text-lg mt-1">Headphone Heroes: Elevating Your Experience Quality Sound</h3>
-                      <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Vitae vel sit convallis aliquet amet vestibulum maecenas ac.</p>
+                      <p class="text-gray-600 mt-2">Whether you're a music lover, a gamer, or someone who enjoys immersive podcasts, quality sound can transform your experience.In a world filled with noise, finding the perfect sound experience is essential...</p>
                       <div class="flex justify-between items-center mt-4">
-                          <span class="text-gray-500">By Emily</span>
+                          <span class="text-gray-500">By John Doe</span>
                           <a href="#" class="text-blue-500 hover:underline">Read More →</a>
                       </div>
                   </div>
@@ -254,13 +330,13 @@
   
               <!-- Blog 2 -->
               <div class="swiper-slide bg-white rounded-lg shadow p-4">
-                  <img src="path_to_image_2.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+                  <img src="image/b2.avif" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
                   <div class="mt-4">
-                      <p class="text-gray-500 text-sm">24 June, 2024</p>
-                      <h3 class="font-semibold text-lg mt-1">Gizmo Galore: Exploring the Coolest Gadgets on the Market</h3>
-                      <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Vitae vel sit convallis aliquet amet vestibulum maecenas ac.</p>
+                      <p class="text-gray-500 text-sm">September 17, 2023</p>
+                      <h3 class="font-semibold text-lg mt-1">What is the mechanical keyboard hobby- why you need one and why it is religion</h3>
+                      <p class="text-gray-600 mt-2">“Why the heck do I need a mechanical keyboard?” Is a question I asked when informed of the existence of them. In an age where the instant gratification monkey runs …</p>
                       <div class="flex justify-between items-center mt-4">
-                          <span class="text-gray-500">By Emily</span>
+                          <span class="text-gray-500">by Keeblogger</span>
                           <a href="#" class="text-blue-500 hover:underline">Read More →</a>
                       </div>
                   </div>
@@ -268,7 +344,7 @@
   
               <!-- Blog 3 -->
               <div class="swiper-slide bg-white rounded-lg shadow p-4">
-                  <img src="path_to_image_3.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+                  <img src="image/b3.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
                   <div class="mt-4">
                       <p class="text-gray-500 text-sm">24 June, 2024</p>
                       <h3 class="font-semibold text-lg mt-1">The 4K Perspective: Gaining Insights into Ultra HD Entertainment</h3>
@@ -282,7 +358,7 @@
   
               <!-- Blog 4 -->
               <div class="swiper-slide bg-white rounded-lg shadow p-4">
-                  <img src="path_to_image_4.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+                  <img src="image/b4.avif" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
                   <div class="mt-4">
                       <p class="text-gray-500 text-sm">24 June, 2024</p>
                       <h3 class="font-semibold text-lg mt-1">Gaming Grasp: Navigating the World of Game Controllers</h3>
@@ -294,7 +370,7 @@
                   </div>
               </div>
               <div class="swiper-slide bg-white rounded-lg shadow p-4">
-                <img src="path_to_image_4.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+                <img src="image/b5.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
                 <div class="mt-4">
                     <p class="text-gray-500 text-sm">24 June, 2024</p>
                     <h3 class="font-semibold text-lg mt-1">Gaming Grasp: Navigating the World of Game Controllers</h3>
@@ -306,7 +382,7 @@
                 </div>
             </div>
             <div class="swiper-slide bg-white rounded-lg shadow p-4">
-              <img src="path_to_image_4.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+              <img src="image/b6.webp" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
               <div class="mt-4">
                   <p class="text-gray-500 text-sm">24 June, 2024</p>
                   <h3 class="font-semibold text-lg mt-1">Gaming Grasp: Navigating the World of Game Controllers</h3>
@@ -318,7 +394,7 @@
               </div>
           </div>
           <div class="swiper-slide bg-white rounded-lg shadow p-4">
-            <img src="path_to_image_4.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+            <img src="image/b7.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
             <div class="mt-4">
                 <p class="text-gray-500 text-sm">24 June, 2024</p>
                 <h3 class="font-semibold text-lg mt-1">Gaming Grasp: Navigating the World of Game Controllers</h3>
@@ -330,7 +406,7 @@
             </div>
         </div>
         <div class="swiper-slide bg-white rounded-lg shadow p-4">
-          <img src="path_to_image_4.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+          <img src="image/b8.webp" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
           <div class="mt-4">
               <p class="text-gray-500 text-sm">24 June, 2024</p>
               <h3 class="font-semibold text-lg mt-1">Gaming Grasp: Navigating the World of Game Controllers</h3>
@@ -342,7 +418,7 @@
           </div>
       </div>
       <div class="swiper-slide bg-white rounded-lg shadow p-4">
-        <img src="path_to_image_4.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+        <img src="image/b9.webp" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
         <div class="mt-4">
             <p class="text-gray-500 text-sm">24 June, 2024</p>
             <h3 class="font-semibold text-lg mt-1">Gaming Grasp: Navigating the World of Game Controllers</h3>
@@ -354,7 +430,7 @@
         </div>
     </div>
     <div class="swiper-slide bg-white rounded-lg shadow p-4">
-      <img src="path_to_image_4.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
+      <img src="image/b10.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
       <div class="mt-4">
           <p class="text-gray-500 text-sm">24 June, 2024</p>
           <h3 class="font-semibold text-lg mt-1">Gaming Grasp: Navigating the World of Game Controllers</h3>
@@ -370,11 +446,17 @@
   </div>
 
 
-  <footer class="bg-gray-50 text-gray-800 py-10">
+  <footer class="bg-green-200 text-gray-800 py-10">
     <div class="container mx-auto flex flex-wrap">
         <div class="w-full md:w-1/3 mb-6 md:mb-0">
-            <h1 class="text-3xl font-bold">GADGETIZE</h1>
-            <p class="mt-2">Lorem ipsum dolor sit amet consectetur. Eu dolor faucibus sit fames elit ac. Hendrerit ultricies morbi faucibus.</p>
+            <div class="flex items-center space-x-2">
+              <img src="image/logo.png" alt="ThynkTech Logo" class="h-11 w-11">
+              <h1 class="text-3xl font-bold">ThynkTech</h1>
+            </div>
+            <p class="mt-2">At ThynkTech, we’re all about innovation, technology, and <p></p>
+              providing insights that help you stay ahead in the tech world.<p></p>
+               Our blog covers everything from the latest gadgets to industry<p></p>
+              trends, expert tips, and in-depth reviews.</p>
             <p class="flex items-center mt-4">
                 <span class="mr-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -382,56 +464,65 @@
                     </svg>
                 </span>
                 <span>Call us 24/7</span>
-                <strong class="ml-2">+001 123 456 789</strong>
+                <strong class="ml-2">+09193407321</strong>
             </p>
         </div>
 
         <div class="w-full md:w-1/3 mb-6 md:mb-0">
             <h2 class="font-bold">Find It Fast</h2>
             <ul class="mt-2">
-                <li>Laptop & Computer</li>
-                <li>Camera & Photo</li>
-                <li>Smartphone & Tablet</li>
-                <li>TV & Audio</li>
-                <li>Home & Electronic</li>
-                <li>Headphone & Speakers</li>
+                <li>Headphones</li>
+                <li>Gaming Mouse</li>
+                <li>Computer</li>
+                <li>Keyboard</li>
+                <li>Playstation</li>
+                <li>Samsung Phone</li>
+                <li>See More...</li>
+            </ul>
+        </div>
+
+        <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <h2 class="font-bold">User Support</h2>
+            <ul class="mt-2">
+          <li>My Account</li>
+          <li>Blogs</li>
+          <li>FAQs</li>
+          <li>Coming Soon</li>
             </ul>
         </div>
 
         <div class="w-full md:w-1/3 mb-6 md:mb-0">
             <h2 class="font-bold">Quick Link</h2>
             <ul class="mt-2">
-                <li>Home Page</li>
-                <li>About Us</li>
-                <li>Shop Now</li>
-                <li>Signup</li>
-                <li>Login</li>
-                <li>Privacy Policy</li>
+          <li>Home Page</li>
+          <li>About Us</li>
+          <li>Shop Now</li>
+          <li>Signup</li>
+          <li>Login</li>
+          <li>Privacy Policy</li>
             </ul>
         </div>
 
-        <div class="w-full md:w-1/3 mb-6 md:mb-0">
-            <h2 class="font-bold">Customer Care</h2>
-            <ul class="mt-2">
-                <li>My Account</li>
-                <li>Track Your Order</li>
-                <li>Customer Service</li>
-                <li>Blogs</li>
-                <li>FAQs</li>
-                <li>Coming Soon</li>
-            </ul>
-        </div>
+       
 
         <div class="w-full md:w-1/3 mb-6 md:mb-0">
             <h2 class="font-bold">Contact Us</h2>
-            <p class="mt-2">26 South Street, New York, NY 98, USA.</p>
-            <p class="mt-1">exampleinfo@gmail.com</p>
+            <p class="mt-2">San Jose City, Nueva Ecija, Philippines</p>
+            <p class="mt-1">ThynkTech@gmail.com</p>
             <h3 class="font-bold mt-4">Follow Us!</h3>
             <div class="flex space-x-4 mt-2">
-                <a href="#" class="text-green-600">Facebook</a>
-                <a href="#" class="text-green-600">Instagram</a>
-                <a href="#" class="text-green-600">Twitter</a>
-                <a href="#" class="text-green-600">LinkedIn</a>
+                <a href="#" class="text-green-600">
+                  <img src="image/facebook.png" alt="Facebook" class="h-6 w-6">
+                </a>
+                <a href="#" class="text-green-600">
+                  <img src="image/gmail.jpg" alt="Instagram" class="h-6 w-6">
+                </a>
+                <a href="#" class="text-green-600">
+                  <img src="image/x.jpg" alt="Twitter" class="h-6 w-6">
+                </a>
+                <a href="#" class="text-green-600">
+                  <img src="image/in.png" alt="LinkedIn" class="h-6 w-6">
+                </a>
             </div>
         </div>
     </div>
