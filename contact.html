@@ -38,13 +38,187 @@
         </div>
     </header>
 
-    <nav class="bg-gray-100 p-2 flex justify-center space-x-6">
-        <a href="main.html" class="font-semibold text-green-600">HOME PAGE</a>
-        <a href="about.html" class="font-semibold">ABOUT US</a>
-        <a href="blog.html" class="font-semibold">BLOGS</a>
-        <a href="page.html" class="font-semibold">PAGES</a>
-        <a href="contact.html" class="font-semibold">CONTACT US</a>
-    </nav>
+    <nav class="bg-green-100 p-2 flex justify-center space-x-6">
+        <a href="main.html" class="font-semibold text-green-600 hover:text-green-800 hover:scale-110 transition-transform duration-300">HOME PAGE</a>
+        <a href="blog.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">BLOGS</a>
+        <a href="about.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">ABOUT US</a>
+        <a href="#faq" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">FAQ's</a>
+        <a href="contact.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">CONTACT US</a>
+      </nav>
+
+      <div class="bg-gray-100">
+        <div class="flex items-center justify-between p-10">
+            <!-- Left Image -->
+            <div class="flex-1 flex justify-center">
+                <img src="image/left.png" alt="Left Image" class="max-w-full h-auto" />
+            </div>
     
+            <!-- Title -->
+            <div class="flex-1 text-center">
+                
+                    <div class="bg-green-200 p-6 rounded-lg shadow-lg">
+                        <h2 class="text-4xl font-bold text-center">Contact Us</h2>
+                    </div>
+                
+            </div>
+    
+            <!-- Right Image -->
+            <div class="flex-1 flex justify-center">
+                <img src="image/right.png" alt="Right Image" class="max-w-full h-auto" />
+            </div>
+        </div>
+    </div>
+
+<div class="bg-gray-100 p-6">
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Map Section -->
+            <div class="space-y-4">
+                <iframe 
+                    class="w-full h-96 rounded-md" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15451.123456789012!2d120.987654321!3d15.790123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3390bf4c4c44123d%3A0xfd5fd7bc99fa65aa!2sSan%20Jose%20City%2C%20Nueva%20Ecija%2C%20Philippines!5e0!3m2!1sen!2sus!4v1614587899874!5m2!1sen!2sus" 
+                    allowfullscreen>
+                </iframe>
+                <div>
+                    <h2 class="text-xl font-semibold">Nueva Ecija</h2>
+                    <p class="text-gray-600">San Jose City, Philipphines</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-blue-500 hover:underline">Directions</a>
+                        <span class="mx-2">|</span>
+                        <a href="#" class="text-blue-500 hover:underline">View larger map</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Form Section -->
+            <div class="space-y-4">
+                <h2 class="text-xl font-bold">Customer Support</h2>
+                <p class="text-gray-600">Your email address is safe with us. Required fields are noted with *</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="first-name" class="block text-sm font-medium text-gray-700">First Name *</label>
+                        <input type="text" id="first-name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                    </div>
+                    <div>
+                        <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name *</label>
+                        <input type="text" id="last-name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Your Email *</label>
+                    <input type="email" id="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Write Your Message *</label>
+                    <textarea id="message" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" rows="5" required></textarea>
+                </div>
+                <div class="flex items-center">
+                    <input type="checkbox" id="remember" class="mr-2">
+                    <label for="remember" class="text-sm text-gray-700">Remember my details for future comments.</label>
+                </div>
+                <div class="flex items-center space-x-4 mt-4">
+                    <button class="bg-green-600 text-white font-bold py-2 px-4 rounded">Send Message</button>
+                    <span class="text-gray-700 font-medium">Contact Us</span>
+                    <div class="flex space-x-2">
+                        <a href="#" class="text-green-600">
+                            <img src="image/facebook.png" alt="Facebook" class="h-6 w-6">
+                        </a>
+                        <a href="#" class="text-green-600">
+                            <img src="image/gmail.jpg" alt="Gmail" class="h-6 w-6">
+                        </a>
+                        <a href="#" class="text-green-600">
+                            <img src="image/x.jpg" alt="Twitter" class="h-6 w-6">
+                        </a>
+                        <a href="#" class="text-green-600">
+                            <img src="image/in.png" alt="LinkedIn" class="h-6 w-6">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-green-200 text-gray-800 py-10">
+    <div class="container mx-auto flex flex-wrap">
+        <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <div class="flex items-center space-x-2">
+              <img src="image/logo.png" alt="ThynkTech Logo" class="h-11 w-11">
+              <h1 class="text-3xl font-bold text-black font-serif italic">ThynkTech</h1>
+            </div>
+            <p class="mt-2">At ThynkTech, we’re all about innovation, technology, and <p></p>
+              providing insights that help you stay ahead in the tech world.<p></p>
+               Our blog covers everything from the latest gadgets to industry<p></p>
+              trends, expert tips, and in-depth reviews.</p>
+            <p class="flex items-center mt-4">
+                <span class="mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 14h2a2 2 0 001-3.732M16 10H2m2 4h12m2 0v4a3 3 0 01-3 3H4a3 3 0 01-3-3v-4h12m7.465-1.465A2 2 0 0020 8h-1.732A10 10 0 1110 18h4a2 2 0 00.293-3.293M16 14h-5a3 3 0 100 6h5a3 3 0 100-6z" />
+                    </svg>
+                </span>
+                <span>Call us 24/7</span>
+                <strong class="ml-2">+09193407321</strong>
+            </p>
+        </div>
+
+        <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <h2 class="font-bold">Find It Fast</h2>
+            <ul class="mt-2">
+                <li>Headphones</li>
+                <li>Gaming Mouse</li>
+                <li>Computer</li>
+                <li>Keyboard</li>
+                <li>Playstation</li>
+                <li>Samsung Phone</li>
+                <li>See More...</li>
+            </ul>
+        </div>
+
+        <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <h2 class="font-bold">User Support</h2>
+            <ul class="mt-2">
+          <li>My Account</li>
+          <li>Blogs</li>
+          <li>FAQs</li>
+          <li>Coming Soon</li>
+            </ul>
+        </div>
+
+        <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <h2 class="font-bold">Quick Link</h2>
+            <ul class="mt-2">
+          <li>Home Page</li>
+          <li>About Us</li>
+          <li>Shop Now</li>
+          <li>Signup</li>
+          <li>Login</li>
+          <li>Privacy Policy</li>
+            </ul>
+        </div>
+
+       
+
+        <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <h2 class="font-bold">Contact Us</h2>
+            <p class="mt-2">San Jose City, Nueva Ecija, Philippines</p>
+            <p class="mt-1">ThynkTech@gmail.com</p>
+            <h3 class="font-bold mt-4">Follow Us!</h3>
+            <div class="flex space-x-4 mt-2">
+                <a href="#" class="text-green-600">
+                  <img src="image/facebook.png" alt="Facebook" class="h-6 w-6">
+                </a>
+                <a href="#" class="text-green-600">
+                  <img src="image/gmail.jpg" alt="Instagram" class="h-6 w-6">
+                </a>
+                <a href="#" class="text-green-600">
+                  <img src="image/x.jpg" alt="Twitter" class="h-6 w-6">
+                </a>
+                <a href="#" class="text-green-600">
+                  <img src="image/in.png" alt="LinkedIn" class="h-6 w-6">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
