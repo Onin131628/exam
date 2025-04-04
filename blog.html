@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -71,166 +71,288 @@
         </div>
     </div>
 
-    <div class="container mx-auto px-4">
-        <h2 class="text-2xl font-bold mb-6">Latest Blogs</h2>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <!-- Blog 1 -->
-                <div class="swiper-slide bg-white rounded-lg shadow p-4">
-                    <img src="image/b1.webp" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
-                    <div class="mt-4">
-                        <p class="text-gray-500 text-sm">June 24, 2007</p>
-                        <h3 class="font-semibold text-lg mt-1">Headphone Heroes: Elevating Your Experience Quality Sound</h3>
-                        <p class="text-gray-600 mt-2">Whether you're a music lover, a gamer, or someone who enjoys immersive podcasts, quality sound can transform your experience.In a world filled with noise, finding the perfect sound experience is essential...</p>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-gray-500">By John Doe</span>
-                            <a href="#" class="text-blue-500 hover:underline">Read More →</a>
-                        </div>
+    <body class="bg-gray-100">
+
+      <div class="container mx-auto p-5">
+          <div class="grid grid-cols-12 gap-4">
+              <!-- Sidebar -->
+              <aside class="col-span-3 bg-gray-100 shadow-md p-5 rounded-md">
+                  <input type="text" placeholder="Search Here..." class="w-full p-2 mb-4 border rounded-md" />
+                  
+                    <h2 class="text-lg font-semibold mb-4 flex items-center justify-between">
+                    Blog Categories
+                    <button id="toggleCategories" class="text-gray-500 hover:text-gray-700 focus:outline-none text-xl">
+                        <span id="toggleIcon"><img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300"></span>
+                    </button>
+                    </h2>
+                    <ul id="categoriesList" class="space-y-2">
+                    <li><input type="checkbox" /> Tech Accessories</li>
+                    <li><input type="checkbox" /> Mobile Cases</li>
+                    <li><input type="checkbox" /> Screen Protectors</li>
+                    <li><input type="checkbox" /> Power Adapters</li>
+                    <li><input type="checkbox" /> Audio Devices</li>
+                    </ul>
+
+                    <script>
+                    const toggleButton = document.getElementById('toggleCategories');
+                    const categoriesList = document.getElementById('categoriesList');
+                    const toggleIcon = document.getElementById('toggleIcon');
+
+                    toggleButton.addEventListener('click', () => {
+                      if (categoriesList.style.display === 'none') {
+                      categoriesList.style.display = 'block';
+                        toggleIcon.innerHTML = '<img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300">';
+                      } else {
+                      categoriesList.style.display = 'none';
+                      toggleIcon.innerHTML = '<img src="image/g1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300">';
+                      }
+                    });
+
+                    // Initialize with the list visible
+                    categoriesList.style.display = 'block';
+                    </script>
+                    <h2 class="text-lg font-semibold mt-5 flex items-center justify-between">
+                    Recent Posts
+                    <button id="toggleRecentPosts" class="text-gray-500 hover:text-gray-700 focus:outline-none text-xl">
+                      <span id="recentPostsIcon"><img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300"></span>
+                    </button>
+                    </h2>
+                    <ul id="recentPostsList" class="space-y-2 mt-2">
+                      <li class="flex items-center">
+                        <a href="gadgets2024.html" class="flex items-center hover:scale-110 transition-transform duration-300">
+                          <img src="image/gad1.jpg" alt="Recent post" class="w-16 h-16 rounded-md mr-2" />
+                          <span>Top Tech Gadgets for 2024: Must-Have Innovations...</span>
+                        </a>
+                      </li>
+                      <li class="flex items-center">
+                        <a href="gamingControllers2024.html" class="flex items-center hover:scale-110 transition-transform duration-300">
+                          <img src="image/con1.jpg" alt="Recent post" class="w-16 h-16 rounded-md mr-2" />
+                          <span>Top Innovations in Gaming Controllers for 2025...</span>
+                        </a>
+                      </li>
+                      <li class="flex items-center">
+                        <a href="deviceTechnology2024.html" class="flex items-center hover:scale-110 transition-transform duration-300">
+                          <img src="image/dev.jpg" alt="Recent post" class="w-16 h-16 rounded-md mr-2" />
+                          <span>Exploring the Latest in Device Technology: Innovations for 2024...</span>
+                        </a>
+                      </li>
+                      <li class="flex items-center">
+                        <a href="aiRevolution2024.html" class="flex items-center hover:scale-110 transition-transform duration-300">
+                          <img src="image/ai.webp" alt="Recent post" class="w-16 h-16 rounded-md mr-2" />
+                          <span>AI Revolution: Transforming the Tech Landscape...</span>
+                        </a>
+                      </li>
+                      <li class="flex items-center">
+                        <a href="smartHomeDevices2024.html" class="flex items-center hover:scale-110 transition-transform duration-300">
+                          <img src="image/hm.jpg" alt="Recent post" class="w-16 h-16 rounded-md mr-2" />
+                          <span>Exploring the Future of Smart Home Devices: Innovations for 2024...</span>
+                        </a>
+                      </li>
+                      <li class="flex items-center">
+                        <a href="techTrends2024.html" class="flex items-center hover:scale-110 transition-transform duration-300">
+                          <img src="image/lat.avif" alt="Recent post" class="w-16 h-16 rounded-md mr-2" />
+                          <span>Device Dynamics: Exploring the Latest Tech Trends...</span>
+                        </a>
+                      </li>
+                    </ul>
+
+                    <script>
+                    const toggleRecentPostsButton = document.getElementById('toggleRecentPosts');
+                    const recentPostsList = document.getElementById('recentPostsList');
+                    const recentPostsIcon = document.getElementById('recentPostsIcon');
+
+                    toggleRecentPostsButton.addEventListener('click', () => {
+                      if (recentPostsList.style.display === 'none') {
+                      recentPostsList.style.display = 'block';
+                        recentPostsIcon.innerHTML = '<img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300">';
+                      } else {
+                      recentPostsList.style.display = 'none';
+                      recentPostsIcon.innerHTML = '<img src="image/g1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300">';
+                      }
+                    });
+
+                    // Initialize with the list visible
+                    recentPostsList.style.display = 'block';
+                    </script>
+                  
+                    <h2 class="text-lg font-semibold mt-5 flex items-center justify-between">
+                    Tags
+                      <button id="toggleTags" class="text-gray-500 hover:text-gray-700 focus:outline-none text-xl">
+                      <span id="tagsToggleIcon"><img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300"></span>
+                      </button>
+                    </h2>
+                    <ul id="tagsContent" class="flex flex-wrap">
+                      <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">Headphones</span>
+                      <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">Mechanical Keyboards</span>
+                      <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">4K Entertainment</span>
+                      <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">MacBooks</span>
+                      <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">PlayStation</span>
+                      <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">AI Revolution</span>
+                      <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">Smart Home</span>
+                      <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">Snapdragon</span>
+                      <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">Smartwatches</span>
+                    </ul>
+                 
+
+                    <script>
+                    const toggleTagsButton = document.getElementById('toggleTags');
+                    const tagsContent = document.getElementById('tagsContent');
+                    const tagsToggleIcon = document.getElementById('tagsToggleIcon');
+
+                    toggleTagsButton.addEventListener('click', () => {
+                      if (tagsContent.style.display === 'none') {
+                      tagsContent.style.display = 'flex';
+                      tagsToggleIcon.innerHTML = '<img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300">';
+                      } else {
+                      tagsContent.style.display = 'none';
+                      tagsToggleIcon.innerHTML = '<img src="image/g1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300">';
+                      }
+                    });
+
+                    // Initialize with the content visible
+                    tagsContent.style.display = 'flex';
+                    </script>
+                  </ul>
+              </aside>
+
+              
+      
+              <!-- Blog Posts -->
+              <main class="col-span-9 grid grid-cols-3 gap-6">
+                <div class="bg-white p-5 shadow-md rounded-md">
+                    <img src="image/b1.webp" alt="Blog Image" class="w-full h-40 object-cover rounded-md mb-4">
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-500">June 24, 2007</span>
                     </div>
+                    <h3 class="text-lg font-semibold">Headphone Heroes: Elevating Your Experience Quality Sound</h3>
+                    <p class="text-gray-600">Whether you're a music lover, a gamer, or someone who enjoys immersive podcasts, quality sound can transform your experience. In a world filled with noise, finding the perfect sound experience is essential...</p>
+                    <button class="mt-4 text-blue-600 hover:underline">Read More</button>
                 </div>
-    
-                <!-- Blog 2 -->
-                <div class="swiper-slide bg-white rounded-lg shadow p-4">
-                    <img src="image/b2.avif" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
-                    <div class="mt-4">
-                        <p class="text-gray-500 text-sm">September 17, 2023</p>
-                        <h3 class="font-semibold text-lg mt-1">What is the mechanical keyboard hobby- why you need one and why it is religion</h3>
-                        <p class="text-gray-600 mt-2">“Why the heck do I need a mechanical keyboard?” Is a question I asked when informed of the existence of them. In an age where the instant gratification monkey runs …</p>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-gray-500">by Keeblogger</span>
-                            <a href="#" class="text-blue-500 hover:underline">Read More →</a>
-                        </div>
+                
+                <div class="bg-white p-5 shadow-md rounded-md">
+                    <img src="image/b2.avif" alt="Blog Image" class="w-full h-40 object-cover rounded-md mb-4">
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-500">September 17, 2023</span>
                     </div>
+                    <h3 class="text-lg font-semibold">What is the mechanical keyboard hobby - why you need one and why it is religion</h3>
+                    <p class="text-gray-600">“Why the heck do I need a mechanical keyboard?” Is a question I asked when informed of the existence of them. In an age where the instant gratification monkey runs …</p>
+                    <button class="mt-4 text-blue-600 hover:underline">Read More</button>
                 </div>
-    
-                <!-- Blog 3 -->
-                <div class="swiper-slide bg-white rounded-lg shadow p-4">
-                    <img src="image/b3.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
-                    <div class="mt-4">
-                        <p class="text-gray-500 text-sm">September 18, 2019</p>
-                        <h3 class="font-semibold text-lg mt-1">The 4K Perspective: Gaining Insights into Ultra HD Entertainment</h3>
-                        <p class="text-gray-600 mt-2">Step into the world of 4K Ultra HD, where every detail comes to life with stunning clarity and vibrant colors. Whether you're streaming movies, gaming, or enjoying your favorite shows, 4K offers an unmatched visual experience. </p>
-                        <div class="flex justify-between items-center mt-4">
-                            <span class="text-gray-500">By Raitse Mitch</span>
-                            <a href="#" class="text-blue-500 hover:underline">Read More →</a>
-                        </div>
+                
+                <div class="bg-white p-5 shadow-md rounded-md">
+                    <img src="image/b3.jpg" alt="Blog Image" class="w-full h-40 object-cover rounded-md mb-4">
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-500">September 18, 2019</span>
                     </div>
+                    <h3 class="text-lg font-semibold">The 4K Perspective: Gaining Insights into Ultra HD Entertainment</h3>
+                    <p class="text-gray-600">Step into the world of 4K Ultra HD, where every detail comes to life with stunning clarity and vibrant colors. Whether you're streaming movies, gaming, or enjoying your favorite shows, 4K offers an unmatched visual experience.</p>
+                    <button class="mt-4 text-blue-600 hover:underline">Read More</button>
                 </div>
-    
-                <!-- Blog 4 -->
-                <div class="swiper-slide bg-white rounded-lg shadow p-4">
-                    <img src="image/b4.avif" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
-                    <div class="mt-4">
-                          <p class="text-gray-500 text-sm">15 October, 2023</p>
-                          <h3 class="font-semibold text-lg mt-1">MacBook Mastery: Exploring the Power of Apple's Laptops</h3>
-                          <p class="text-gray-600 mt-2">Discover the innovation behind Apple's MacBook lineup. From the sleek design to the powerful M-series chips, MacBooks redefine productivity and creativity. Learn how these laptops cater to professionals, students, and tech enthusiasts alike.</p>
-                          <div class="flex justify-between items-center mt-4">
-                            <span class="text-gray-500">By TechGuru</span>
-                            <a href="#" class="text-blue-500 hover:underline">Read More →</a>
-                        </div>
+            
+                <div class="bg-white p-5 shadow-md rounded-md">
+                    <img src="image/b4.avif" alt="Blog Image" class="w-full h-40 object-cover rounded-md mb-4">
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-500">15 October, 2023</span>
                     </div>
+                    <h3 class="text-lg font-semibold">MacBook Mastery: Exploring the Power of Apple's Laptops</h3>
+                    <p class="text-gray-600">Discover the innovation behind Apple's MacBook lineup. From the sleek design to the powerful M-series chips, MacBooks redefine productivity and creativity. Learn how these laptops cater to professionals, students, and tech enthusiasts alike.</p>
+                    <button class="mt-4 text-blue-600 hover:underline">Read More</button>
                 </div>
-                <!-- Blog 5 -->
-                <div class="swiper-slide bg-white rounded-lg shadow p-4">
-                  <img src="image/b5.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
-                  <div class="mt-4">
-                      <p class="text-gray-500 text-sm">15 October, 2023</p>
-                      <h3 class="font-semibold text-lg mt-1">PlayStation Evolution: A Journey Through Gaming Excellence</h3>
-                      <p class="text-gray-600 mt-2">From its inception in 1994 to the latest PlayStation 5, Sony's PlayStation has revolutionized the gaming industry. With cutting-edge graphics, immersive gameplay, and a vast library of exclusive titles, it continues to...</p>
-                      <div class="flex justify-between items-center mt-4">
-                        <span class="text-gray-500">By Alex Johnson</span>
-                        <a href="#" class="text-blue-500 hover:underline">Read More →</a>
-                      </div>
+            
+                <div class="bg-white p-5 shadow-md rounded-md">
+                    <img src="image/b5.jpg" alt="Blog Image" class="w-full h-40 object-cover rounded-md mb-4">
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-500">15 October, 2023</span>
+                    </div>
+                    <h3 class="text-lg font-semibold">PlayStation Evolution: A Journey Through Gaming Excellence</h3>
+                    <p class="text-gray-600">From its inception in 1994 to the latest PlayStation 5, Sony's PlayStation has revolutionized the gaming industry. With cutting-edge graphics, immersive gameplay, and a vast library of exclusive titles, it continues to...</p>
+                    <button class="mt-4 text-blue-600 hover:underline">Read More</button>
+                </div>
+            
+                <div class="bg-white p-5 shadow-md rounded-md">
+                    <img src="image/b6.webp" alt="Blog Image" class="w-full h-40 object-cover rounded-md mb-4">
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-500">24 June, 2024</span>
+                    </div>
+                    <h3 class="text-lg font-semibold">Unveiling the M4 Chip: Apple's Next-Gen Powerhouse</h3>
+                    <p class="text-gray-600">Apple's M4 chip is set to revolutionize the tech industry with its unmatched performance and efficiency. Built on a 3nm process, it offers faster speeds, improved AI capabilities, and enhanced graphics, making it a game-changer...</p>
+                    <button class="mt-4 text-blue-600 hover:underline">Read More</button>
+                </div>
+                
+                <div class="bg-white p-5 shadow-md rounded-md">
+                    <img src="image/b7.jpg" alt="Blog Image" class="w-full h-40 object-cover rounded-md mb-4">
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-500">24 June, 2024</span>
+                    </div>
+                    <h3 class="text-lg font-semibold">Galaxy AI: Revolutionizing the Future of Artificial Intelligence</h3>
+                    <p class="text-gray-600">Galaxy AI is at the forefront of innovation, blending cutting-edge machine learning with intuitive design. From enhancing user experiences to driving breakthroughs in automation, Galaxy AI is shaping the future of technology.</p>
+                    <button class="mt-4 text-blue-600 hover:underline">Read More</button>
+                </div>
+            
+                <div class="bg-white p-5 shadow-md rounded-md">
+                    <img src="image/b8.webp" alt="Blog Image" class="w-full h-40 object-cover rounded-md mb-4">
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-500">24 June, 2024</span>
+                    </div>
+                    <h3 class="text-lg font-semibold">Snapdragon X Elite: Redefining Mobile Computing</h3>
+                    <p class="text-gray-600">The Snapdragon X Elite is Qualcomm's latest innovation, designed to deliver unparalleled performance and efficiency for mobile devices. With advanced AI capabilities, enhanced graphics, and cutting-edge connectivity, it sets a...</p>
+                    <button class="mt-4 text-blue-600 hover:underline">Read More</button>
+                </div>
+            
+                <div class="bg-white p-5 shadow-md rounded-md">
+                    <img src="image/b9.webp" alt="Blog Image" class="w-full h-40 object-cover rounded-md mb-4">
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-500">24 June, 2024</span>
+                    </div>
+                    <h3 class="text-lg font-semibold">Advanced Gaming: The Future of Immersive Entertainment</h3>
+                    <p class="text-gray-600">Explore the cutting-edge advancements in gaming technology, from virtual reality to AI-driven gameplay. Discover how these innovations are transforming the gaming experience, making it more immersive, interactive, and engaging than ever before.</p>
+                    <button class="mt-4 text-blue-600 hover:underline">Read More</button>
+                </div>
+            
+                <div class="bg-white p-5 shadow-md rounded-md">
+                    <img src="image/b10.jpg" alt="Blog Image" class="w-full h-40 object-cover rounded-md mb-4">
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-500">24 June, 2025</span>
+                    </div>
+                    <h3 class="text-lg font-semibold">The Best Cellphones of 2025: A Leap into the Future</h3>
+                    <p class="text-gray-600">2025 has brought us groundbreaking advancements in mobile technology. From foldable displays to AI-driven features, the latest cellphones redefine innovation and user experience. Explore the top contenders that are shaping the future...</p>
+                    <button class="mt-4 text-blue-600 hover:underline">Read More</button>
+                </div>
+         
+                <div class="bg-white p-5 shadow-md rounded-md">
+                  <img src="image/watch.jpg" alt="Blog Image" class="w-full h-40 object-cover rounded-md mb-4">
+                  <div class="flex items-center mb-2">
+                  <span class="text-sm text-gray-500">24 June, 2024</span>
                   </div>
-              </div>
-              <!-- Blog 6 -->
-              <div class="swiper-slide bg-white rounded-lg shadow p-4">
-                <img src="image/b6.webp" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
-                <div class="mt-4">
-                      <p class="text-gray-500 text-sm">24 June, 2024</p>
-                      <h3 class="font-semibold text-lg mt-1">Unveiling the M4 Chip: Apple's Next-Gen Powerhouse</h3>
-                      <p class="text-gray-600 mt-2">Apple's M4 chip is set to revolutionize the tech industry with its unmatched performance and efficiency. Built on a 3nm process, it offers faster speeds, improved AI capabilities, and enhanced graphics, making it a game-changer...</p>
-                      <div class="flex justify-between items-center mt-4">
-                        <span class="text-gray-500">By TechInsider</span>
-                        <a href="#" class="text-blue-500 hover:underline">Read More →</a>
-                    </div>
+                  <h3 class="text-lg font-semibold">Smartwatch Revolution: The Future of Wearable Tech</h3>
+                    <p class="text-gray-600">Discover how smartwatches are transforming the way we interact with technology. From fitness tracking to seamless connectivity, explore the latest innovations in wearable tech and their impact on daily life...</p>
+                  <button class="mt-4 text-blue-600 hover:underline">Read More</button>
                 </div>
-            </div>
-            <!-- Blog 7 -->
-            <div class="swiper-slide bg-white rounded-lg shadow p-4">
-              <img src="image/b7.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
-              <div class="mt-4">
-                  <p class="text-gray-500 text-sm">24 June, 2024</p>
-                  <h3 class="font-semibold text-lg mt-1">Galaxy AI: Revolutionizing the Future of Artificial Intelligence</h3>
-                  <p class="text-gray-600 mt-2">Galaxy AI is at the forefront of innovation, blending cutting-edge machine learning with intuitive design. From enhancing user experiences to driving breakthroughs in automation, Galaxy AI is shaping the future of technology.</p>
-                  <div class="flex justify-between items-center mt-4">
-                    <span class="text-gray-500">By TechVisionary</span>
-                    <a href="#" class="text-blue-500 hover:underline">Read More →</a>
+                <div class="bg-white p-5 shadow-md rounded-md">
+                  <img src="image/loptops.webp" alt="Blog Image" class="w-full h-40 object-cover rounded-md mb-4">
+                  <div class="flex items-center mb-2">
+                  <span class="text-sm text-gray-500">24 June, 2024</span>
                   </div>
-              </div>
-          </div>
-          <!-- Blog 8 -->
-          <div class="swiper-slide bg-white rounded-lg shadow p-4">
-            <img src="image/b8.webp" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
-            <div class="mt-4">
-                  <p class="text-gray-500 text-sm">24 June, 2024</p>
-                  <h3 class="font-semibold text-lg mt-1">Snapdragon X Elite: Redefining Mobile Computing</h3>
-                  <p class="text-gray-600 mt-2">The Snapdragon X Elite is Qualcomm's latest innovation, designed to deliver unparalleled performance and efficiency for mobile devices. With advanced AI capabilities, enhanced graphics, and cutting-edge connectivity, it sets a...</p>
-                  <div class="flex justify-between items-center mt-4">
-                    <span class="text-gray-500">By TechEnthusiast</span>
-                    <a href="#" class="text-blue-500 hover:underline">Read More →</a>
+                  <h3 class="text-lg font-semibold">Laptop Trends: Redefining Portability and Performance</h3>
+                    <p class="text-gray-600">Explore the latest advancements in laptops, from ultra-slim designs to powerful processors. Learn how these devices are shaping the future of work and entertainment, enhancing productivity, creativity, portability, and redefining...</p>
+                  <button class="mt-4 text-blue-600 hover:underline">Read More</button>
                 </div>
-            </div>
-        </div>
-        <!-- Blog 9 -->
-        <div class="swiper-slide bg-white rounded-lg shadow p-4">
-          <img src="image/b9.webp" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
-          <div class="mt-4">
-              <p class="text-gray-500 text-sm">24 June, 2024</p>
-              <h3 class="font-semibold text-lg mt-1">Advanced Gaming: The Future of Immersive Entertainment</h3>
-              <p class="text-gray-600 mt-2">Explore the cutting-edge advancements in gaming technology, from virtual reality to AI-driven gameplay. Discover how these innovations are transforming the gaming experience, making it more immersive, interactive, and engaging than ever before.</p>
-              <div class="flex justify-between items-center mt-4">
-                <span class="text-gray-500">By TechGamer</span>
-                <a href="#" class="text-blue-500 hover:underline">Read More →</a>
-              </div>
+          
+                 
+</main>
+</div>
+      
+          <!-- Pagination -->
+          <div class="flex justify-center mt-8">
+              <button class="mx-1 p-2 bg-gray-200 rounded-md">1</button>
+              <button class="mx-1 p-2 bg-gray-200 rounded-md">2</button>
+              <button class="mx-1 p-2 bg-gray-200 rounded-md">3</button>
+              <button class="mx-1 p-2 bg-gray-200 rounded-md">Next →</button>
           </div>
       </div>
-      <!-- Blog 10 -->
-      <div class="swiper-slide bg-white rounded-lg shadow p-4">
-        <img src="image/b10.jpg" alt="Blog Image" class="w-full h-48 object-cover rounded-t-lg">
-        <div class="mt-4">
-              <p class="text-gray-500 text-sm">24 June, 2025</p>
-              <h3 class="font-semibold text-lg mt-1">The Best Cellphones of 2025: A Leap into the Future</h3>
-              <p class="text-gray-600 mt-2">2025 has brought us groundbreaking advancements in mobile technology. From foldable displays to AI-driven features, the latest cellphones redefine innovation and user experience. Explore the top contenders that are shaping the future...</p>
-              <div class="flex justify-between items-center mt-4">
-                <span class="text-gray-500">By TechVisionary</span>
-                <a href="#" class="text-blue-500 hover:underline">Read More →</a>
-            </div>
-        </div>
-    </div>
-            </div>
-        </div>
-    </div>
-  
-  
-    <footer class="bg-green-200 text-gray-800 py-10">
-      <div class="container mx-auto flex flex-wrap">
-        <div class="w-full md:w-1/3 mb-6 md:mb-0">
-          <div class="flex items-center space-x-2">
-            <img src="image/logo.png" alt="ThynkTech Logo" class="h-11 w-11">
-            <h1 class="text-3xl font-bold text-black font-serif italic">ThynkTech</h1>
-          </div>
-          <p class="mt-2">At ThynkTech, we’re all about innovation, technology, and providing insights that help you stay ahead in the tech world. Our blog covers everything from the latest gadgets to industry trends, expert tips, and in-depth reviews.</p>
-          <p class="flex items-center mt-4">
-            <span class="mr-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 14h2a2 2 0 001-3.732M16 10H2m2 4h12m2 0v4a3 3 0 01-3 3H4a3 3 0 01-3-3v-4h12m7.465-1.465A2 2 0 0020 8h-1.732A10 10 0 1110 18h4a2 2 0 00.293-3.293M16 14h-5a3 3 0 100 6h5a3 3 0 100-6z" />
-              </svg>
-            </span>
-            <span>Call us 24/7</span>
-            <strong class="ml-2">+09193407321</strong>
-          </p>
-        </div>
+      
+      </body>
+      </html>
 
 
 
