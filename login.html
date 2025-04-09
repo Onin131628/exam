@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-yellow-100 flex items-center justify-center h-screen">
+
+    <div class="bg-yellow-50 p-8 rounded-lg shadow-lg w-96">
+        <h2 class="text-3xl font-bold text-green-800 mb-6 text-center">Login Now</h2>
+        <form>
+            <div class="mb-4">
+                <label class="block text-gray-700" for="email">Email</label>
+                <input class="mt-1 block w-full p-2 border border-gray-300 rounded" type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700" for="password">Password</label>
+                <input class="mt-1 block w-full p-2 border border-gray-300 rounded" type="password" id="password" placeholder="Password" required>
+            </div>
+            <button class="w-full bg-green-700 text-white font-bold py-2 rounded" type="submit">Login</button>
+            <p class="text-center my-4">Or login with</p>
+            <button class="w-full bg-white border border-gray-300 text-black font-bold py-2 rounded mb-2 flex items-center justify-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor"><path d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 6 4.391 11 10.125 11.875v-8.375H7v-3h3.125V10.25C10.125 8.25 11.25 6.375 14.25 6.375c2.625 0 3.875.199 3.875.199v4.25h-2.125C15.75 10.625 15.375 11 14 11c-1.875 0-2.125 1-2.125 2v2.625H16l-1 3H11.875V24C17.5 24 24 18.625 24 12z"></path></svg>
+                Login with Facebook
+            </button>
+            <button class="w-full bg-white border border-gray-300 text-black font-bold py-2 rounded flex items-center justify-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor"><path d="M12 0c-6.627 0-12 5.373-12 12 0 6.627 5.373 12 12 12 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12zm.372 18.514c-1.451 0-2.783-.129-3.762-.28-.245-.059-.305-.155-.343-.392l-.634-3.421c-.04-.215-.395-.265-.676-.264 1.287 0 1.75-.892 1.815-1.392.021-.196.021-.44.001-.609-.065-.496-.57-.938-1.438-.938-2.327 0-2.674 1.81-2.674 1.81-.011.33.062.658.246.87.173.187.399.285.676.287.942 0 1.404-.84.517-1.141-.682-.371-1.591.25-1.591 1.513 0 .688.335 1.12.496 1.24.052.37.315.525.687.56 1.906.188 3.055 1.312 3.055 3.209v-.581c-.002-.012-.023 0-.042 0zm-.372-14.514c5.523 0 10 4.477 10 10 0 5.523-4.477 10-10 10s-10-4.477-10-10c0-5.523 4.477-10 10-10zm-.121-1.75C9.624-1.236 1.75.069 1.75 10c0 5.95 4.778 10.515 10.928 10.287A11.951 11.951 0 0012 9.862c-2.362 0-4.663-.793-6.478-2.547C4.947 6.436 4.5 8.778 5 10a6.184 6.184 0 001.31 3.243C5.948 9.916 2.5 9.423 2.5 10c0 3.925 2.706 1-1 5 0-2.505.68-5.28 2.5-7z"></path></svg>
+                Login with Google
+            </button>
+            <p class="text-center mt-4">Don’t have an account?</p>
+            <a href="get.html" class="text-green-700 font-bold text-center">Sign Up</a>
+        </form>
+    </div>
+
+</body>
+</html>

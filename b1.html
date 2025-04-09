@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z5l5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" />
+   
+</head>
+
+<body class="bg-white">
+    <header class="p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+            <img src="image/logo.png" alt="Techmax Logo" class="h-10 w-10">
+            <span class="text-2xl font-bold text-black">ThynkTech</span>
+            
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <select class="border border-gray-300 rounded-md p-2">
+                <option>All Categories</option>
+                <!-- Add more categories as needed -->
+            </select>
+            <input type="text" placeholder="Search for products..." class="border border-gray-300 rounded-md p-2">
+            <button class="bg-green-600 text-white rounded-md px-4 py-2">Search</button>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <span class="cursor-pointer">Login</span>
+            <span class="cursor-pointer">Account</span>
+           
+        </div>
+    </header>
+
+    <nav class="bg-green-100 p-2 flex justify-center space-x-6">
+        <a href="main.html" class="font-semibold text-green-600 hover:text-green-800 hover:scale-110 transition-transform duration-300">HOME PAGE</a>
+        <a href="blog.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">BLOGS</a>
+        <a href="about.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">ABOUT US</a>
+        <a href="#faq" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">FAQ's</a>
+        <a href="contact.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">CONTACT US</a>
+      </nav>
+
+      <div class="bg-gray-100">
+        <div class="flex items-center justify-between p-10">
+            <!-- Left Image -->
+            <div class="flex-1 flex justify-center">
+                <img src="image/left.png" alt="Left Image" class="max-w-full h-auto" />
+            </div>
+    
+            <!-- Title -->
+            <div class="flex-1 text-center">
+                
+                    <div class="bg-green-200 p-6 rounded-lg shadow-lg">
+                        <h2 class="text-4xl font-bold text-center">Blog Details</h2>
+                    </div>
+                
+            </div>
+    
+            <!-- Right Image -->
+            <div class="flex-1 flex justify-center">
+                <img src="image/right.png" alt="Right Image" class="max-w-full h-auto" />
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto p-5">
+        <div class="grid grid-cols-12 gap-4">
+            <!-- Sidebar -->
+            <aside class="col-span-3 bg-gray-100 shadow-md p-5 rounded-md">
+                <input type="text" placeholder="Search Here..." class="w-full p-2 mb-4 border rounded-md" />
+                
+                  <h2 class="text-lg font-semibold mb-4 flex items-center justify-between">
+                  Blog Categories
+                  <button id="toggleCategories" class="text-gray-500 hover:text-gray-700 focus:outline-none text-xl">
+                      <span id="toggleIcon"><img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300"></span>
+                  </button>
+                  </h2>
+                  <ul id="categoriesList" class="space-y-2">
+                  <li><input type="checkbox" /> Tech Accessories</li>
+                  <li><input type="checkbox" /> Mobile Cases</li>
+                  <li><input type="checkbox" /> Screen Protectors</li>
+                  <li><input type="checkbox" /> Power Adapters</li>
+                  <li><input type="checkbox" /> Audio Devices</li>
+                  </ul>
+
+                  <script>
+                  const toggleButton = document.getElementById('toggleCategories');
+                  const categoriesList = document.getElementById('categoriesList');
+                  const toggleIcon = document.getElementById('toggleIcon');
+
+                  toggleButton.addEventListener('click', () => {
+                    if (categoriesList.style.display === 'none') {
+                    categoriesList.style.display = 'block';
+                      toggleIcon.innerHTML = '<img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300">';
+                    } else {
+                    categoriesList.style.display = 'none';
+                    toggleIcon.innerHTML = '<img src="image/g1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300">';
+                    }
+                  });
+
+                  // Initialize with the list visible
+                  categoriesList.style.display = 'block';
+                  </script>
+                  <h2 class="text-lg font-semibold mt-5 flex items-center justify-between">
+                    Recent Posts
+                    <button id="toggleRecentPosts" class="text-gray-500 hover:text-gray-700 focus:outline-none text-xl">
+                        <span id="recentPostsIcon"><img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300"></span>
+                    </button>
+                </h2>
+                <ul id="recentPostsList" class="space-y-2 mt-2">
+                    <li class="flex items-center">
+                        <a href="b13.html" class="flex items-center hover:scale-110 transition-transform duration-300">
+                            <img src="image/gad1.jpg" alt="Top Tech Gadgets" class="w-16 h-16 rounded-md mr-2" />
+                            <span>Top Tech Gadgets for 2024: Must-Have Innovations...</span>
+                        </a>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="b14.html" class="flex items-center hover:scale-110 transition-transform duration-300">
+                            <img src="image/con1.jpg" alt="Gaming Innovations" class="w-16 h-16 rounded-md mr-2" />
+                            <span>Top Innovations in Gaming Controllers for 2025...</span>
+                        </a>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="b15.html" class="flex items-center hover:scale-110 transition-transform duration-300">
+                            <img src="image/dev.jpg" alt="Device Technology" class="w-16 h-16 rounded-md mr-2" />
+                            <span>Exploring the Latest in Device Technology: Innovations for 2024...</span>
+                        </a>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="b16.html" class="flex items-center hover:scale-110 transition-transform duration-300">
+                            <img src="image/ai.webp" alt="AI Transformation" class="w-16 h-16 rounded-md mr-2" />
+                            <span>AI Revolution: Transforming the Tech Landscape...</span>
+                        </a>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="b17.html" class="flex items-center hover:scale-110 transition-transform duration-300">
+                            <img src="image/hm.jpg" alt="Smart Home Devices" class="w-16 h-16 rounded-md mr-2" />
+                            <span>Exploring the Future of Smart Home Devices: Innovations for 2024...</span>
+                        </a>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="b18.html" class="flex items-center hover:scale-110 transition-transform duration-300">
+                            <img src="image/lat.avif" alt="Latest Tech Trends" class="w-16 h-16 rounded-md mr-2" />
+                            <span>Device Dynamics: Exploring the Latest Tech Trends...</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                  <script>
+                  const toggleRecentPostsButton = document.getElementById('toggleRecentPosts');
+                  const recentPostsList = document.getElementById('recentPostsList');
+                  const recentPostsIcon = document.getElementById('recentPostsIcon');
+
+                  toggleRecentPostsButton.addEventListener('click', () => {
+                    if (recentPostsList.style.display === 'none') {
+                    recentPostsList.style.display = 'block';
+                      recentPostsIcon.innerHTML = '<img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300">';
+                    } else {
+                    recentPostsList.style.display = 'none';
+                    recentPostsIcon.innerHTML = '<img src="image/g1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300">';
+                    }
+                  });
+
+                  // Initialize with the list visible
+                  recentPostsList.style.display = 'block';
+                  </script>
+                
+                  <h2 class="text-lg font-semibold mt-5 flex items-center justify-between">
+                  Tags
+                    <button id="toggleTags" class="text-gray-500 hover:text-gray-700 focus:outline-none text-xl">
+                    <span id="tagsToggleIcon"><img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300"></span>
+                    </button>
+                  </h2>
+                  <ul id="tagsContent" class="flex flex-wrap">
+                    <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">Headphones</span>
+                    <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">Mechanical Keyboards</span>
+                    <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">4K Entertainment</span>
+                    <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">MacBooks</span>
+                    <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">PlayStation</span>
+                    <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">AI Revolution</span>
+                    <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">Smart Home</span>
+                    <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">Snapdragon</span>
+                    <span class="bg-gray-200 text-gray-700 px-3 py-1 mr-2 mb-2 rounded hover:bg-green-500 hover:text-white hover:scale-110 transition-transform duration-300">Smartwatches</span>
+                  </ul>
+               
+
+                  <script>
+                  const toggleTagsButton = document.getElementById('toggleTags');
+                  const tagsContent = document.getElementById('tagsContent');
+                  const tagsToggleIcon = document.getElementById('tagsToggleIcon');
+
+                  toggleTagsButton.addEventListener('click', () => {
+                    if (tagsContent.style.display === 'none') {
+                    tagsContent.style.display = 'flex';
+                    tagsToggleIcon.innerHTML = '<img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300">';
+                    } else {
+                    tagsContent.style.display = 'none';
+                    tagsToggleIcon.innerHTML = '<img src="image/g1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300">';
+                    }
+                  });
+
+                  // Initialize with the content visible
+                  tagsContent.style.display = 'flex';
+                  </script>
+                </ul>
+            </aside>
+            <body class="bg-gray-100 p-8">
+                <div class="container mx-auto">
+                  <div class="max-w-2xl bg-white rounded-2xl shadow-xl p-8">
+                    
+                    <!-- Date -->
+                    <div class="flex items-center text-sm text-green-600 mb-4">
+                      <span class="mr-2">&#128197;</span>
+                      <span>June 24, 2024</span>
+                    </div>
+              
+                    <!-- Title -->
+                    <h1 class="text-3xl font-extrabold text-gray-800 mb-4">
+                      Headphone Heroes: Elevating Your Experience with Quality Sound
+                    </h1>
+              
+                    <!-- Author + Meta -->
+                    <div class="flex items-center text-sm text-gray-600 mb-6">
+                      <div class="flex items-center mr-6">
+                        <img src="https://via.placeholder.com/40" alt="Author" class="rounded-full shadow-sm">
+                        <span class="ml-2">By Henry</span>
+                      </div>
+                      <span class="mr-4">💬 24 Comments</span>
+                      <span>👁️ 1.2k Views</span>
+                    </div>
+              
+                    <!-- Image -->
+                    <img src="https://via.placeholder.com/600x400" alt="Headphones" class="rounded-lg mb-6 shadow-md">
+              
+                    <!-- Content -->
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                      Discover a new dimension of audio excellence with Headphone Heroes. Designed for audiophiles and casual listeners alike,
+                      these headphones combine cutting-edge technology with exceptional comfort. Whether you're diving into your favorite
+                      playlist or gaming with friends, Headphone Heroes deliver rich, immersive sound that elevates every experience.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed text-lg mt-4">
+                      Crafted with precision and built to last, they offer a perfect blend of form and function. Enjoy crystal-clear highs,
+                      deep bass, and noise isolation that lets you focus entirely on what matters—your sound. Step up your audio game with
+                      Headphone Heroes and transform the way you listen.
+                    </p>
+                    
+                  </div>
+                </div>
+              </body>
+              
+</body>
+</html>
+
+            
