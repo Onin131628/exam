@@ -37,12 +37,19 @@
            
         </div>
 
+        <div class="flex items-center space-x-4">
+            <a href="main.html" class="text-green-600 font-bold">Home</a>
+            <a href="about.html" class="text-green-600 font-bold">About Us</a>
+            <a href="contact.html" class="text-green-600 font-bold">Contact</a>
+        </div>
         
     </header>
 
     <nav class="bg-green-100 p-2 flex justify-center space-x-6">
         <a href="main.html" class="font-semibold text-green-600 hover:text-green-800 hover:scale-110 transition-transform duration-300">HOME PAGE</a>
         <a href="blog.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">BLOGS</a>
+        <a href="gadgetReviews.php" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">GADGET REVIEWS</a>
+
         <a href="about.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">ABOUT US</a>
         <a href="#faq" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">FAQ's</a>
         <a href="contact.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">CONTACT US</a>
@@ -177,7 +184,7 @@
                     <h2 class="text-lg font-semibold mt-5 flex items-center justify-between">
                     Tags
                       <button id="toggleTags" class="text-gray-500 hover:text-gray-700 focus:outline-none text-xl">
-                      <span id="tagsToggleIcon"><img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300"></span>
+                      <span id="tagsToggleIcon"><img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 transition-transform duration-300"></span>
                       </button>
                     </h2>
                     <ul id="tagsContent" class="flex flex-wrap">
@@ -201,10 +208,10 @@
                     toggleTagsButton.addEventListener('click', () => {
                       if (tagsContent.style.display === 'none') {
                       tagsContent.style.display = 'flex';
-                      tagsToggleIcon.innerHTML = '<img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300">';
+                      tagsToggleIcon.innerHTML = '<img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 transition-transform duration-300">';
                       } else {
                       tagsContent.style.display = 'none';
-                      tagsToggleIcon.innerHTML = '<img src="image/g1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300">';
+                      tagsToggleIcon.innerHTML = '<img src="image/g1.png" alt="minus" class="h-7 w-7 hover:scale-110 transition-transform duration-300">';
                       }
                     });
 

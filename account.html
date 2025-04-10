@@ -7,13 +7,20 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
+    <header class="p-4 flex flex-wrap items-center justify-between">
+        <div class="flex items-center space-x-4">
+            <a href="main.html" class="text-green-600 font-bold">Home</a>
+            <a href="about.html" class="text-green-600 font-bold">About Us</a>
+            <a href="contact.html" class="text-green-600 font-bold">Contact</a>
+        </div>
+    </header>
     <div class="container mx-auto mt-10">
         <!-- Close Button -->
         <a href="main.html" class="inline-block mb-4 bg-red-500 text-white p-2 rounded hover:bg-red-600">Close</a>
 
         <!-- Profile Section -->
-        <div class="bg-white shadow-md rounded-lg overflow-hidden flex">
-            <div class="w-1/4 bg-green-300 p-4">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden flex flex-wrap">
+            <div class="w-full sm:w-1/4 bg-green-300 p-4">
                 <img src="image/nino.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full mx-auto">
                 <h2 class="text-center mt-4 text-xl font-semibold">Aftab Hossain</h2>
                 <p class="text-center text-gray-600">User Interface Designer</p>
@@ -24,7 +31,7 @@
                 </div>
                 <a href="#" class="text-center block text-yellow-500 mt-2">Favorites</a>
             </div>
-            <div class="flex-1 p-6">
+            <div class="w-full sm:flex-1 p-6">
                 <div class="mb-6">
                     <h3 class="text-lg font-bold mb-2">Account Settings</h3>
                     <div class="border-t border-gray-300 mb-4"></div>
