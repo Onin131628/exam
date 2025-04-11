@@ -175,7 +175,7 @@
                   <h2 class="text-lg font-semibold mt-5 flex items-center justify-between">
                   Tags
                     <button id="toggleTags" class="text-gray-500 hover:text-gray-700 focus:outline-none text-xl">
-                    <span id="tagsToggleIcon"><img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 duration-300"></span>
+                    <span id="tagsToggleIcon"><img src="image/m1.png" alt="minus" class="h-7 w-7 hover:scale-110 transition-transform duration-300"></span>
                     </button>
                   </h2>
                   <ul id="tagsContent" class="flex flex-wrap">
@@ -325,68 +325,98 @@
                         
                         <!-- Comments Section -->
                         <div class="container mx-auto px-4">
-                            <h2 class="text-xl font-semibold mb-4">3 Comments</h2>
+                          <h2 class="text-xl font-semibold mb-4">3 Comments</h2>
                         
-                            <div class="bg-white shadow-md p-4 rounded mb-4">
-                                <div class="flex space-x-4 mb-2">
-                                    <img src="image/mik.jpg" alt="Profile" class="w-10 h-10 rounded-full" />
-                                    <div>
-                                        <div class="text-sm text-gray-500">16 October, 2023</div>
-                                        <div class="font-semibold">Mike Johnson</div>
-                                        <p class="text-gray-700">
-                                            4K is a game changer! The detail is incredible, especially in nature documentaries. I can't imagine going back to standard definition after experiencing this.
-                                        </p>
-                                        <button class="text-blue-600">Reply</button>
-                                    </div>
-                                </div>
+                          <div class="bg-white shadow-md p-4 rounded mb-4" id="commentsSection"></div>
+                            <div class="flex space-x-4 mb-2">
+                              <img src="image/geo.jpg" alt="Profile" class="w-10 h-10 rounded-full" />
+                              <div>
+                                <div class="text-sm text-gray-500">14 April, 2021</div>
+                                <div class="font-semibold">George Patel</div>
+                                <p class="text-gray-700">
+                                  Crazy how far headphones have come! I just got a pair with real-time translation and honestly, it feels like sci-fi. I used them during a video call with a client in Japan and it translated everything instantly. 2025 is wild 🔥
+                                </p>
+                                <button class="text-blue-600">Reply</button>
+                              </div>
                             </div>
                         
-                            <div class="bg-white shadow-md p-4 rounded">
-                                <div class="flex space-x-4 mb-2">
-                                    <img src="image/emily.jpg" alt="Profile" class="w-10 h-10 rounded-full" />
-                                    <div>
-                                        <div class="text-sm text-gray-500">14 October, 2023</div>
-                                        <div class="font-semibold">Emily Carter</div>
-                                        <p class="text-gray-700">
-                                            I love how 4K brings out the colors in animated films! It’s like watching them for the first time all over again. Highly recommend investing in a good setup.
-                                        </p>
-                                        <button class="text-blue-600">Reply</button>
-                                    </div>
-                                </div>
+                            <div class="flex space-x-4 mb-2">
+                              <img src="image/emma.jpg" alt="Profile" class="w-10 h-10 rounded-full" />
+                              <div>
+                                <div class="text-sm text-gray-500">12 June, 2023</div>
+                                <div class="font-semibold">Emma Grace</div>
+                                <p class="text-gray-700">
+                                  I still can’t get over how headphones now track heart rate and stress levels. I used mine during a workout and it actually told me to slow down 😅. Can’t wait to see what next year brings!
+                                </p>
+                                <button class="text-blue-600">Reply</button>
+                              </div>
                             </div>
-                        </div>
-<!-- Leave a Comment Section -->
-<div class="max-w-md mx-auto p-10 bg-white rounded-lg shadow-md">
-  <h2 class="text-xl font-semibold mb-4">Leave a Comment</h2>
-
-  <div class="mb-4">
-    <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
-    <input type="text" id="name" placeholder="Your Name"
-           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-300" />
-  </div>
-
-  <div class="mb-4">
-    <label for="email" class="block text-sm font-medium text-gray-700">Your Email</label>
-    <input type="email" id="email" placeholder="Your Email"
-           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-300" />
-  </div>
-
-  <div class="mb-4">
-    <label for="comments" class="block text-sm font-medium text-gray-700">Write Your Comments...</label>
-    <textarea id="comments" rows="4"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-300" placeholder="Write Your Comments..."></textarea>
-  </div>
-
-  <div class="mb-4 flex items-center">
-    <input type="checkbox" id="remember" class="mr-2" />
-    <label for="remember" class="text-sm text-gray-600">Remember my details for future comments.</label>
-  </div>
-
-  <button class="w-full bg-green-600 text-white font-semibold py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
-    Leave A Comment
-  </button>
-</div>
-
+                          </div>
+                        
+                          <!-- Leave a Comment Section -->
+                          <div class="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
+                            <h2 class="text-xl font-semibold mb-4">Leave a Comment</h2>
+                        
+                            <div class="mb-4">
+                              <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+                              <input type="text" id="name" placeholder="Your Name"
+                                     class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-300" />
+                            </div>
+                        
+                            <div class="mb-4">
+                              <label for="email" class="block text-sm font-medium text-gray-700">Your Email</label>
+                              <input type="email" id="email" placeholder="Your Email"
+                                     class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-300" />
+                            </div>
+                        
+                            <div class="mb-4">
+                              <label for="comments" class="block text-sm font-medium text-gray-700">Write Your Comments...</label>
+                              <textarea id="comments" rows="4"
+                                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-300" placeholder="Write Your Comments..."></textarea>
+                            </div>
+                        
+                            <div class="mb-4 flex items-center">
+                              <input type="checkbox" id="remember" class="mr-2" />
+                              <label for="remember" class="text-sm text-gray-600">Remember my details for future comments.</label>
+                            </div>
+                        
+                            <button id="submitComment" class="w-full bg-green-600 text-white font-semibold py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+                              Leave A Comment
+                            </button>
+                          </div>
+                        
+                          <script>
+                            document.getElementById('submitComment').addEventListener('click', function () {
+                              const name = document.getElementById('name').value;
+                              const comment = document.getElementById('comments').value;
+                        
+                              if (name && comment) {
+                                const commentSection = document.getElementById('commentsSection');
+                                const newComment = document.createElement('div');
+                                newComment.classList.add('flex', 'space-x-4', 'mb-2');
+                                newComment.innerHTML = `
+                                    <img src="image/${name.charAt(0).toLowerCase()}.png" alt="Profile" class="w-10 h-10 rounded-full" onerror="this.style.display='none'; document.getElementById('profileImage').style.display='block';" />
+                                    <div id="profileImage" style="display: none; width: 40px; height: 40px; border-radius: 50%; background: #512DA8; font-size: 14px; color: #fff; text-align: center; line-height: 40px;">
+                                      ${name.charAt(0).toUpperCase()}
+                                    </div>
+                                  <div>
+                                    <div class="text-sm text-gray-500">${new Date().toLocaleDateString()}</div>
+                                    <div class="font-semibold">${name}</div>
+                                    <p class="text-gray-700">${comment}</p>
+                                    <button class="text-blue-600">Reply</button>
+                                  </div>
+                                `;
+                                commentSection.appendChild(newComment);
+                        
+                                // Clear input fields
+                                document.getElementById('name').value = '';
+                                document.getElementById('comments').value = '';
+                              } else {
+                                alert('Please fill in both your name and comment.');
+                              }
+                            });
+                          </script>
+                        
           </div>
 
 

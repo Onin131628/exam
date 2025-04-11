@@ -65,8 +65,8 @@
     <h2 class="text-3xl font-bold text-center mb-10">🔥 Featured Reviews</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Review Card -->
-      <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-        <img src="https://images.unsplash.com/photo-1601924133654-6b6c44242318" alt="iPhone" class="w-full h-48 object-cover">
+      <div id="reviewCard-0" class="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition cursor-pointer" onclick="openModal(0)">
+        <img src="image/16pro.jpg" alt="iPhone" class="w-full h-48 object-cover">
         <div class="p-5">
           <h3 class="text-xl font-semibold mb-2">iPhone 16 Pro Max Review</h3>
           <p class="text-gray-600 text-sm mb-4">Apple’s latest flagship – fast, stylish, and smarter than ever.</p>
@@ -77,9 +77,11 @@
         </div>
       </div>
 
+      <!-- Modal -->
+      
       <!-- More Cards (Add as needed) -->
-      <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-        <img src="https://images.unsplash.com/photo-1587202372775-b48a9f1c91bb" alt="Laptop" class="w-full h-48 object-cover">
+      <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition cursor-pointer" onclick="openModal(1)">
+        <img src="image/lenovo1.jpg" alt="Laptop" class="w-full h-48 object-cover">
         <div class="p-5">
           <h3 class="text-xl font-semibold mb-2">Lenovo Legion Pro 5</h3>
           <p class="text-gray-600 text-sm mb-4">Game like a pro with Lenovo's powerful performance and display.</p>
@@ -89,6 +91,31 @@
           </div>
         </div>
       </div>
+      
+      <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition cursor-pointer" onclick="openModal(2)">
+          <img src="image/24ultra.jpg" alt="Laptop" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold mb-2">Samsung S24 Ultra</h3>
+            <p class="text-gray-600 text-sm mb-4">Excellent management of frame mismatches when watching all types of videos or playing video games.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-green-600 font-bold">69,699</span>
+              <span class="text-yellow-500">⭐⭐⭐⭐☆</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition cursor-pointer" onclick="openModal(8)">
+        <img src="image/10thgen.jpg" alt="Laptop" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold mb-2">iPad 10th Gen</h3>
+            <p class="text-gray-600 text-sm mb-4">A16 chip. Even more joy in store and Games.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-green-600 font-bold">₱69,999</span>
+              <span class="text-yellow-500">⭐⭐⭐⭐☆</span>
+            </div>
+          </div>
+        </div>
 
       <!-- You can continue adding more cards here -->
     </div>
