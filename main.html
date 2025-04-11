@@ -23,41 +23,42 @@
   </style>
 </head>
 <body class="bg-white">
-    <header class="p-4 flex items-center justify-between">
-        <div class="flex items-center space-x-2">
-            <img src="image/logo.png" alt="ThynkTech Logo" class="h-10 w-10">
-            <span class="text-2xl font-bold text-black font-serif italic">ThynkTech</span>
-            
-        </div>
-        
-      
-        
-        <div class="flex items-center space-x-4">
-            <span class="cursor-pointer hover:scale-110 transition-transform duration-300" onclick="window.location.href='login.html'">Login</span>
-            <span class="cursor-pointer hover:scale-110 transition-transform duration-300" onclick="window.location.href='account.html'">Account</span>
-           
-        </div>
-    </header>
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md p-4 flex items-center justify-between">
+  <div class="flex items-center space-x-2">
+    <img src="image/logo.png" alt="ThynkTech Logo" class="h-10 w-10">
+    <span class="text-2xl font-bold text-black font-serif italic">ThynkTech</span>
+  </div>
 
-    <nav class="bg-green-100 p-2 flex justify-center space-x-6">
-      <a href="main.html" class="font-semibold text-green-600 hover:text-green-800 hover:scale-110 transition-transform duration-300">HOME PAGE</a>
+  <div class="flex items-center space-x-4">
+    <span class="cursor-pointer hover:scale-110 transition-transform duration-300" onclick="window.location.href='login.html'">Login</span>
+    <span class="cursor-pointer hover:scale-110 transition-transform duration-300" onclick="window.location.href='account.html'">Account</span>
+  </div>
+</header>
 
-      
-      <a href="blog.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">BLOGS</a>
-      <a href="gadgetReviews.php" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">GADGET REVIEWS</a>
-      <a href="about.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">ABOUT US</a>
-      <a href="about.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">FAQ's</a>
-      <a href="contact.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">CONTACT US</a>
-    </nav>
+<!-- Navigation (below header) -->
+<nav class="fixed top-[72px] left-0 right-0 z-40 bg-green-100 p-3 flex justify-center flex-wrap space-x-4 sm:space-x-6 shadow">
+  <a href="main.html" class="font-semibold text-green-600 hover:text-green-800 hover:scale-110 transition-transform duration-300">HOME PAGE</a>
+  <a href="blog.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">BLOGS</a>
+  <a href="gadgetReviews.php" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">GADGET REVIEWS</a>
+  <a href="about.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">ABOUT US</a>
+  <a href="faq.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">FAQ's</a>
+  <a href="contact.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">CONTACT US</a>
+</nav>
 
-   <!-- Hero Section -->
-<section class="bg-gray-900 text-white py-16">
-  <div class="container mx-auto px-4 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Tech & Gadget Reviews That Matter</h1>
-    <p class="text-lg md:text-xl text-gray-300 mb-6">Unbiased reviews, latest news, and tech blog articles to help you make smarter choices.</p>
-    <a href="#reviews" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">Explore Reviews</a>
+<!-- Hero Section with top margin to prevent overlap -->
+<section class="bg-gray-900 text-white py-24 mt-[130px]">
+  <div class="container mx-auto px-6 text-center">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Tech & Gadget Reviews That Matter</h1>
+    <p class="text-xl md:text-2xl text-gray-300 mb-8">
+      Unbiased reviews, latest news, and tech blog articles to help you make smarter choices.
+    </p>
+    <a href="#reviews" class="bg-green-500 hover:bg-green-600 text-white font-bold text-lg md:text-xl py-4 px-8 rounded-xl transition duration-300 shadow-lg hover:shadow-xl">
+      Explore Reviews
+    </a>
   </div>
 </section>
+  
 
 <!-- Featured Reviews -->
 <section id="reviews" class="py-12 bg-white">
@@ -91,6 +92,7 @@
           </div>
         </div>
       </div>
+     
       
       <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition cursor-pointer" onclick="openModal(2)">
           <img src="image/24ultra.jpg" alt="Laptop" class="w-full h-48 object-cover">

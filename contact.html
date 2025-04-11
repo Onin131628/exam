@@ -15,33 +15,28 @@
    
 </head>
 <body class="bg-white">
-    <header class="p-4 flex flex-wrap items-center justify-between">
-      
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md p-4 flex items-center justify-between">
         <div class="flex items-center space-x-2">
-            <img src="image/logo.png" alt="Techmax Logo" class="h-10 w-10">
-            <span class="text-2xl font-bold text-black">ThynkTech</span>
-            
+          <img src="image/logo.png" alt="ThynkTech Logo" class="h-10 w-10">
+          <span class="text-2xl font-bold text-black font-serif italic">ThynkTech</span>
         </div>
-        
-       
-        
+      
         <div class="flex items-center space-x-4">
-            <span class="cursor-pointer">Login</span>
-            <span class="cursor-pointer">Account</span>
-           
+          <span class="cursor-pointer hover:scale-110 transition-transform duration-300" onclick="window.location.href='login.html'">Login</span>
+          <span class="cursor-pointer hover:scale-110 transition-transform duration-300" onclick="window.location.href='account.html'">Account</span>
         </div>
-    </header>
-
-    <nav class="bg-green-100 p-2 flex flex-wrap justify-center space-x-6">
+      </header>
+      
+      <!-- Navigation (below header) -->
+      <nav class="fixed top-[72px] left-0 right-0 z-40 bg-green-100 p-3 flex justify-center flex-wrap space-x-4 sm:space-x-6 shadow">
         <a href="main.html" class="font-semibold text-green-600 hover:text-green-800 hover:scale-110 transition-transform duration-300">HOME PAGE</a>
         <a href="blog.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">BLOGS</a>
         <a href="gadgetReviews.php" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">GADGET REVIEWS</a>
-
         <a href="about.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">ABOUT US</a>
-        <a href="#faq" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">FAQ's</a>
+        <a href="faq.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">FAQ's</a>
         <a href="contact.html" class="font-semibold hover:text-green-800 hover:scale-110 transition-transform duration-300">CONTACT US</a>
       </nav>
-
+      
       <div class="bg-gray-100">
         <div class="flex flex-wrap items-center justify-between p-10">
             <!-- Left Image -->
